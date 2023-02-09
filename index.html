@@ -13,11 +13,14 @@
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
               rel="stylesheet" />
+       <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
        <!-- NAVIGATION -->
        <nav id="nav-menu">
+
               <div>
                      <a href="#"><img src="./assets/profile-pic.png" alt=""><span>SUMIT UJJWAL</span></a>
               </div>
@@ -29,7 +32,7 @@
                      <a href="#contact" class="nav-link contact">CONTACT</a>
                      <a href="#" class="nav-link resume">RESUME</a>
               </div>
-              <div id="ham">
+              <!-- <div id="ham">
                      <ul>
                             <li><a class="nav-link home" href="#home">Home</a></li>
                             <li><a class="nav-link about" href="#about">About</a></li>
@@ -37,6 +40,41 @@
                             <li><a class="nav-link projects" href="#projects">Projects</a></li>
                             <li><a class="nav-link contact" href="#contact">Contact</a></li>
                      </ul>
+              </div> -->
+              <div id="ham-menu" onclick="openNav()">
+                     <span class="material-symbols-outlined">
+                            menu
+                     </span>
+              </div>
+              <div id="mySidenav" class="sidenav">
+
+                     <a href="#home" class="nav-link home" onclick="closeNav()"><span class="material-symbols-outlined">
+                                   home
+                            </span>HOME</a>
+                            <hr>
+                     <a href="#about" class="nav-link about" onclick="closeNav()"><span
+                                   class="material-symbols-outlined">
+                                   person
+                            </span>ABOUT</a>
+                            <hr>
+                     <a href="#skills" class="nav-link skills" onclick="closeNav()"><span
+                                   class="material-symbols-outlined">
+                                   stacked_bar_chart
+                            </span>SKILLS</a>
+                            <hr>
+                     <a href="#projects" class="nav-link projects" onclick="closeNav()"><span
+                                   class="material-symbols-outlined">
+                                   view_quilt
+                            </span>PROJECTS</a>
+                            <hr>
+                     <a href="#contact" class="nav-link contact" onclick="closeNav()"><span
+                                   class="material-symbols-outlined">
+                                   contact_mail
+                            </span>CONTACT</a>
+                            <hr>
+                     <a href="#" class="nav-link resume" onclick="closeNav()"><span class="material-symbols-outlined">
+                                   description
+                            </span>RESUME</a>
               </div>
        </nav>
        <!-- <div id="home">Home Section</div>
@@ -71,9 +109,9 @@
                                    <h1 id="user-detail-name">Hi, I'm Sumit Ujjwal</h1>
                                    <p id="user-detail-intro">Full Stack Web Developer</p>
                                    <p><q>Passionate about coding and Problem Solving...</q></p>
-       
+
                                    <!-- contact me button ends here -->
-       
+
                                    <!-- achievement section -->
                                    <div class="achievement">
                                           <div class="ach">
@@ -86,14 +124,15 @@
                                                  <span>Solved DSA Problems</span>
                                           </div>
                                    </div>
-       
+
                                    <!-- contact me button -->
                                    <a href="#contact" class="contact-button">
                                           <button>Contact Me</button>
                                    </a>
                             </div>
                             <div class="container">
-                                   <img class="home-img shape" src="./assets/profile-pic-4.png" alt="Professional photo">
+                                   <img class="home-img shape" src="./assets/profile-pic-4.png"
+                                          alt="Professional photo">
                             </div>
                      </div>
               </section>
