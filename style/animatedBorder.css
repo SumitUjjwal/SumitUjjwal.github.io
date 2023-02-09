@@ -35,9 +35,9 @@
     /* padding-top: 50%; */
 }
 
-.container>img{
-    /* width: 250%; */
-}
+/* .container>img{
+    width: 250%;
+} */
 
 @keyframes morph {
     0% {

@@ -30,18 +30,18 @@
         width: 80%;
         margin: auto;
         color: rgb(216, 216, 216);
-        background-color: rgb(216, 216, 216) ;
+        background-color: rgb(216, 216, 216);
     }
 
     .sidenav a {
         /* border: 1px solid red; */
-        width: 40%;
+        width: 50%;
         /* padding: 8px 8px 8px 32px; */
         text-decoration: none;
         font-size: 20px;
         color: #000;
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
         gap: 10px;
 
@@ -119,6 +119,76 @@
     #home>div>:nth-child(2) {
         /* border: 1px solid blue; */
         width: 90%;
+    }
+
+    /* ABOUT */
+    /* .about-section {
+        width: 90%;
+        margin: auto;
+    }
+
+    .about-section-intro {
+        width: 90%;
+        margin: auto;
+    }
+
+    .about-section-intro>p {
+        text-align: center;
+    } */
+
+    .about-section-intro>div {
+        /* display: flex; */
+        flex-direction: column;
+        /* justify-content: space-around;
+        align-items: center; */
+    }
+
+    /* .about-section-intro>div>p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        z-index: 2;
+    } */
+
+    .about-section-intro>div>p>img {
+        width: 100%;
+        /* background-color: #667C89;
+        border-radius-t: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px; */
+    }
+
+    /* .about-section-intro>div>p>img:hover {
+        background-color: #ebf1f5;
+        transition: 1s ease-in-out;
+    }
+
+    .about-section-intro>div>p>span {
+        font-size: 20px;
+    } */
+
+    /* GITHUB STATS */
+    /* .github {
+        width: 90%;
+        margin: auto;
+    } */
+
+    /* .github+hr {} */
+
+    .github-stats {
+        margin: auto;
+        /* display: flex;
+        justify-content: space-around;
+        align-items: center; */
+        flex-direction: column;
+    }
+
+    .github-stats>img {
+        width: 100%;
+        height: auto;
     }
 }
 
