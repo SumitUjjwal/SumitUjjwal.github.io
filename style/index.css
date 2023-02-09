@@ -63,29 +63,44 @@ nav>:nth-child(2)>a {
        font-weight: 600;
 }
 
+nav>:nth-child(3) {
+       display: none;
+}
+
 /* main */
 
 main {
        /* margin-top: 50px; */
-       width: 90%;
+       width: 100%;
        margin: auto;
 }
 
 /* home */
 #home{
+       background-color: #ebf1f5;
+       /* height: 100vh; */
+}
+
+#home>div{
        /* border: 1px solid red; */
        display: flex;
        justify-content: center;
        align-items: center;
        margin: auto;
        gap: 20px;
+       width: 90%;
 }
 
-#home>:nth-child(1){
+#home>div>:nth-child(1){
        /* border: 1px solid green; */
        /* white-space: 100px; */
        width: 40%;
        margin: auto;
+       text-align: center;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
 }
 
 #user-detail-name{
@@ -119,7 +134,7 @@ main {
 }
 
 
-#home>:nth-child(2){
+#home>div>:nth-child(2){
        /* border: 1px solid blue; */
        width: 40%;
 }
