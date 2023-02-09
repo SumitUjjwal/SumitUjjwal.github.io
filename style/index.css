@@ -19,12 +19,13 @@ nav {
        display: flex;
        justify-content: space-between;
        align-items: center;
-       border: 1px solid black;
+       /* border: 1px solid black; */
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        background-color: #ffffff;
        position: sticky;
-       z-index: 1;
+       z-index: 5;
        top: 0;
-       margin-bottom: 50px;
+       /* margin-bottom: 50px; */
        padding: 0 20px;
        height: 80px;
 }
@@ -65,13 +66,60 @@ nav>:nth-child(2)>a {
 /* main */
 
 main {
-       margin-top: 50px;
+       /* margin-top: 50px; */
        width: 90%;
        margin: auto;
 }
 
 /* home */
 #home{
+       /* border: 1px solid red; */
        display: flex;
-       justify-content: space-between;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+       gap: 20px;
+}
+
+#home>:nth-child(1){
+       /* border: 1px solid green; */
+       /* white-space: 100px; */
+       width: 40%;
+       margin: auto;
+}
+
+#user-detail-name{
+       font-size: 50px;
+        /* border: 1px solid green; */
+}
+
+#user-detail-intro{
+        /* border: 1px solid blue; */
+       font-size: 30px;
+}
+
+.achievement{
+       display: flex;
+       align-items: center;
+       gap: 20px;
+}
+
+.achievement>div{
+       display: flex;
+       align-items: center;
+}
+
+.contact-button>button{
+       border: 1px solid black;
+       background-color: transparent;
+       border-radius: 5px;
+       height: 40px;
+       width: 150px;
+       font-size: 15px;
+}
+
+
+#home>:nth-child(2){
+       /* border: 1px solid blue; */
+       width: 40%;
 }
