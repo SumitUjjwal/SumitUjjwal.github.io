@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open",
+    "start": ""
+  },
+  "name": "sumitujjwal.github.io",
+  "description": "## Maximum Marks - 34",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumitUjjwal/SumitUjjwal.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SumitUjjwal/SumitUjjwal.github.io/issues"
+  },
+  "homepage": "https://github.com/SumitUjjwal/SumitUjjwal.github.io#readme",
+  "dependencies": {
+    "yarn": "^1.22.19"
+  }
+}
