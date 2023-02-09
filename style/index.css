@@ -28,6 +28,7 @@ nav {
        /* margin-bottom: 50px; */
        padding: 0 20px;
        height: 80px;
+       margin-bottom: 0px;
 }
 
 nav>:nth-child(1)>a{

@@ -8,6 +8,7 @@
        <title>Sumit Ujjwal</title>
        <link rel="stylesheet" href="./style/index.css">
        <link rel="stylesheet" href="./style/animatedBorder.css">
+       <link rel="stylesheet" href="./style/mediaQueries.css">
        <link rel="preconnect" href="https://fonts.googleapis.com" />
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
@@ -20,13 +21,22 @@
               <div>
                      <a href="#"><img src="./assets/profile-pic.png" alt=""><span>SUMIT UJJWAL</span></a>
               </div>
-              <div>
+              <div id="notham">
                      <a href="#home" class="nav-link home">HOME</a>
                      <a href="#about" class="nav-link about">ABOUT</a>
                      <a href="#skills" class="nav-link skills">SKILLS</a>
                      <a href="#projects" class="nav-link projects">PROJECTS</a>
                      <a href="#contact" class="nav-link contact">CONTACT</a>
                      <a href="#" class="nav-link resume">RESUME</a>
+              </div>
+              <div id="ham">
+                     <ul>
+                            <li><a class="nav-link home" href="#home">Home</a></li>
+                            <li><a class="nav-link about" href="#about">About</a></li>
+                            <li><a class="nav-link skills" href="#skills">Skills</a></li>
+                            <li><a class="nav-link projects" href="#projects">Projects</a></li>
+                            <li><a class="nav-link contact" href="#contact">Contact</a></li>
+                     </ul>
               </div>
        </nav>
        <!-- <div id="home">Home Section</div>
@@ -51,39 +61,40 @@
               <!-- HOME -->
               <section id="home">
                      <div>
-                            <!-- <h1 id="user-detail-name">Sumit Ujjwal</h1>
-                            <p id="user-detail-intro">Welcome to my portfolio! I am a software developer with experience
-                                   in building
-                                   web applications.</p>
-                            <button>RESUME</button> -->
-                            <!-- <h2>Hi,</h2> -->
-                            <h1 id="user-detail-name">Hi, I'm <span>Sumit Ujjwal</span>
-                            </h1>
-                            <p id="user-detail-intro">Full Stack Web Developer</p>
-                            <p><q>Passionate about coding and Problem Solving...</q></p>
-
-                            <!-- contact me button ends here -->
-
-                            <!-- achievement section -->
-                            <div class="achievement">
-                                   <div class="ach">
-                                          <h1>3+</h1>
-                                          <span>Completed Projects</span>
+                            <div>
+                                   <!-- <h1 id="user-detail-name">Sumit Ujjwal</h1>
+                                   <p id="user-detail-intro">Welcome to my portfolio! I am a software developer with experience
+                                          in building
+                                          web applications.</p>
+                                   <button>RESUME</button> -->
+                                   <!-- <h2>Hi,</h2> -->
+                                   <h1 id="user-detail-name">Hi, I'm Sumit Ujjwal</h1>
+                                   <p id="user-detail-intro">Full Stack Web Developer</p>
+                                   <p><q>Passionate about coding and Problem Solving...</q></p>
+       
+                                   <!-- contact me button ends here -->
+       
+                                   <!-- achievement section -->
+                                   <div class="achievement">
+                                          <div class="ach">
+                                                 <h1>3+</h1>
+                                                 <span>Completed Projects</span>
+                                          </div>
+                                          <!--  -->
+                                          <div class="ach">
+                                                 <h1>300+</h1>
+                                                 <span>Solved DSA Problems</span>
+                                          </div>
                                    </div>
-                                   <!--  -->
-                                   <div class="ach">
-                                          <h1>300+</h1>
-                                          <span>Solved DSA Problems</span>
-                                   </div>
+       
+                                   <!-- contact me button -->
+                                   <a href="#contact" class="contact-button">
+                                          <button>Contact Me</button>
+                                   </a>
                             </div>
-
-                            <!-- contact me button -->
-                            <a href="#contact" class="contact-button">
-                                   <button>Contact Me</button>
-                            </a>
-                     </div>
-                     <div class="container">
-                            <img class="home-img shape" src="./assets/profile-pic-4.png" alt="Professional photo">
+                            <div class="container">
+                                   <img class="home-img shape" src="./assets/profile-pic-4.png" alt="Professional photo">
+                            </div>
                      </div>
               </section>
 
@@ -120,7 +131,7 @@
                      <h2>Projects</h2>
                      <div class="box-container">
                             <div class="project-card">
-                                   <img src="./assets/project_1.png" alt="" />
+                                   <!-- <img src="./assets/project_1.png" alt="" /> -->
                                    <h2 class="project-title">Car Zone</h2>
                                    <p class="project-description">
                                           <span>Car Zone</span> is a clone of an e-commerce website Auto Zone, that
@@ -153,7 +164,7 @@
                             </div>
 
                             <div class="project-card">
-                                   <img src="./assets/project_2.png" alt="" />
+                                   <!-- <img src="./assets/project_2.png" alt="" /> -->
                                    <h2 class="project-title">Digital Basket</h2>
                                    <p class="project-description">
                                           <span>Digital Basket</span> s a clone of an e-commerce website BestBuy, which
@@ -185,7 +196,7 @@
                             </div>
 
                             <div class="project-card">
-                                   <img src="./assets/project_1.png" alt="" />
+                                   <!-- <img src="./assets/project_1.png" alt="" /> -->
                                    <h2 class="project-title">Be You</h2>
                                    <p class="project-description">
                                           <span>Be You</span> is a clone of an Indian e-commerce site MyGlamm, that
@@ -217,7 +228,7 @@
               </section>
 
               <!-- GITHUB STATS -->
-              <section class="react-activity-calendar">
+              <!-- <section class="react-activity-calendar">
                      <h1>GitHub React-Activity-Calendar</h1>
                      <img id="github-streak-stats"
                             src="https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=default&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D"
@@ -228,7 +239,7 @@
                      <img id="github-stats-card"
                             src="https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true"
                             alt="stat-card">
-              </section>
+              </section> -->
 
               <!-- CONTACTS -->
               <section id="contact">
