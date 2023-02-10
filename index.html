@@ -65,10 +65,11 @@
                      <hr>
                      <a href="#contact" class="nav-link contact" onclick="closeNav()"><span
                                    class="material-symbols-outlined">
-                                   contact_mail
+                                   contact_page
                             </span>CONTACT</a>
                      <hr>
-                     <a target="_blank" href="./assets/Sumit_Ujjwal_Resume.pdf" download="Sumit_Ujjwal_Resume" class="nav-link resume" onclick="closeNav()"><span class="material-symbols-outlined">
+                     <a target="_blank" href="./assets/Sumit_Ujjwal_Resume.pdf" download="Sumit_Ujjwal_Resume"
+                            class="nav-link resume" onclick="closeNav()"><span class="material-symbols-outlined">
                                    description
                             </span>RESUME</a>
               </div>
@@ -86,12 +87,14 @@
                                    <!-- achievement section -->
                                    <div class="achievement">
                                           <div class="ach">
-                                                 <h1>3+</h1>
+                                                 <strong>3+</strong>
+                                                 <!-- <h1>3+</h1> -->
                                                  <span>Completed Projects</span>
                                           </div>
                                           <!--  -->
                                           <div class="ach">
-                                                 <h1>300+</h1>
+                                                 <strong>300+</strong>
+                                                 <!-- <h1>300+</h1> -->
                                                  <span>Solved DSA Problems</span>
                                           </div>
                                    </div>
@@ -112,42 +115,57 @@
               <section id="about" class="about-section">
                      <h2 class="section-title">About</h2>
                      <hr>
+                     <!-- <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p> -->
                      <div class="about-section-intro">
-                            <p id="user-detail-intro">I am an innovative optimized solution seeker. Excited to be inthe
-                                   deployment phase of my new career as a full stack web developer An avid coder and a
-                                   great
-                                   team player.</p>
                             <div>
-                                   <p><img src="./assets/about-section/remote-collab.png" alt=""><span>Remote Collaboration</span></p>
-                                   <p><img src="./assets/about-section/team-work-1.png" alt=""><span>Team Work</span></p>
-                                   <p><img src="./assets/about-section/self-motivated.png" alt=""><span>Self Motivated</span></p>
+                                   <p class="about-section-intro-para">
+                                          Hey! It's
+                                          <strong>Sumit Ujjwal</strong>
+                                          and I'm a Back-end Focused <strong>Full-Stack Web Developer</strong> building the Back-end of Websites
+                                          and Web Applications
+                                          that leads to the success of the overall product. Check out some of my work in the
+                                          <strong>Projects</strong> section.
+                                   </p>
+                                   <p class="about-section-intro-para">
+                                          I'm open to <strong>Job</strong> opportunities where I can contribute, learn and grow. If you have a
+                                          good opportunity that matches my skills and experience then don't hesitate to <strong>contact</strong>
+                                          me.
+                                   </p>
+                            </div>
+                            <div class="about-section-intro-img">
+                                   <p><img src="./assets/about-section/remote-collab.png" alt=""><span>Remote
+                                                 Collaboration</span></p>
+                                   <p><img src="./assets/about-section/team-work-1.png" alt=""><span>Team Work</span>
+                                   </p>
+                                   <p><img src="./assets/about-section/self-motivated.png" alt=""><span>Self
+                                                 Motivated</span></p>
                             </div>
                      </div>
               </section>
 
               <!-- GITHUB STATS -->
-              <section id="github" class="github">
+              <section id="github" class="github-section">
                      <h2 class="section-title">GitHub Stats</h2>
                      <hr>
                      <div class="github-stats">
                             <img id="github-streak-stats"
-                                   src="https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=default&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D"
+                                   src="https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=vue&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D"
                                    alt="streakstat">
                             <img id="github-top-langs"
-                                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal"
+                                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal&theme=vue"
                                    alt="top_languages">
                             <img id="github-stats-card"
-                                   src="https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true"
+                                   src="https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true&theme=vue"
                                    alt="stat-card">
                      </div>
-                     <div id="calendar">
+                     <div id="calendar" class="react-activity-calendar">
                             <div class="calendar">
                             </div>
                      </div>
               </section>
 
               <!-- SKILLS -->
-              <section id="skills">
+              <section id="skills" class="skills-section">
                      <h2 class="section-title">Skills</h2>
                      <hr>
                      <div class="skills-card">
@@ -165,7 +183,7 @@
               </section>
 
               <!-- PROJECTS -->
-              <section id="projects">
+              <section id="projects" class="projects-section">
                      <h2 class="section-title">Projects</h2>
                      <hr>
                      <div class="box-container">
@@ -272,7 +290,7 @@
 
 
               <!-- CONTACTS -->
-              <section id="contact">
+              <section id="contact" class="contact-section">
                      <h2 class="section-title">Contact</h2>
                      <hr>
                      <a id="contact-github" href="https://github.com/SumitUjjwal">GitHub</a>
