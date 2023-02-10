@@ -18,15 +18,17 @@
 } */
 
 .container {
+    /* border: 1px solid red; */
     align-items: center;
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
+    width: 60%;
 }
 
 .shape {
     background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-    animation: morph 12s ease-in-out infinite;
+    animation: morph 25s ease-in-out infinite;
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     height: 400px;
     transition: all 1s ease-in-out;
