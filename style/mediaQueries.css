@@ -209,6 +209,105 @@
         width: 100%;
         height: auto;
     }
+
+    /* PROJECTS */
+    /* .projects-section {
+        height: 100vh;
+        padding: 80px 0px;
+        width: 90%;
+        margin: auto;
+    } */
+
+    /* .box-container {
+        margin: auto;
+    } */
+
+    .project-card {
+        /* display: flex;
+        justify-content: space-evenly; */
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid black; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /* border-radius: 5px;
+        margin: 20px auto; */
+        padding: 20px 0px;
+    }
+
+    /* .project-card:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    } */
+
+    .project-img {
+        width: 90%;
+        /* border: 1px solid red; */
+        /* margin: auto; */
+        /* text-align: center; */
+    }
+
+    
+
+    .project-image {
+        /* width: 500px; */
+        /* width: 100%; */
+        /* height: 200px; */
+        /* border: 1px solid red; */
+        /* margin: auto; */
+        border-radius: 5px;
+    }
+
+    .project-desc {
+        /* border: 1px solid green; */
+        width: 90%;
+    }
+
+    /* .project-title {
+        color: #667C89;
+        text-transform: uppercase;
+    } */
+
+    /* .project-desc p {
+        color: gray;
+    } */
+
+    /* .project-desc strong {
+        color: #667C89;
+    } */
+
+    .project-button {
+        /* margin: 10px 0px;
+        border: 1px solid #667C89;
+        color: #667C89;
+        background-color: transparent;
+        border-radius: 5px;
+        height: 40px;
+        width: 150px;
+        font-size: 15px; */
+        margin: auto;
+        text-align: center;
+    }
+
+    .project-button>:nth-child(1)>button {
+        margin: 10px 0px;
+        border-radius: 5px;
+        height: 40px;
+        width: 120px;
+        font-size: 15px;
+        background-color: #668972;
+        color: #ffffff;
+        border: none;
+    }
+
+    .project-button>:nth-child(2)>button {
+        margin: 10px 0px;
+        border-radius: 5px;
+        height: 40px;
+        width: 120px;
+        font-size: 15px;
+        background-color: #897a66;
+        color: #ffffff;
+        border: none;
+    }
 }
 
 @media (max-width: 350px) {
