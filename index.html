@@ -29,7 +29,7 @@
                      <a href="#"><img src="./assets/profile-pic.png" alt=""><span>SUMIT UJJWAL</span></a>
               </div>
               <div id="notham">
-                     <a href="#home" class="nav-link home">HOME</a>
+                     <a href="#" class="nav-link home">HOME</a>
                      <a href="#about" class="nav-link about">ABOUT</a>
                      <a href="#skills" class="nav-link skills">SKILLS</a>
                      <a href="#projects" class="nav-link projects">PROJECTS</a>
@@ -44,7 +44,7 @@
               </div>
               <div id="mySidenav" class="sidenav">
 
-                     <a href="#home" class="nav-link home" onclick="closeNav()"><span class="material-symbols-outlined">
+                     <a href="#" class="nav-link home" onclick="closeNav()"><span class="material-symbols-outlined">
                                    home
                             </span>HOME</a>
                      <hr>
@@ -77,7 +77,7 @@
 
        <main>
               <!-- HOME -->
-              <section id="home">
+              <section id="home" class="home-section">
                      <div>
                             <div>
                                    <h1 id="user-detail-name">Hi, I'm Sumit Ujjwal</h1>
@@ -112,7 +112,7 @@
               </section>
 
               <!-- ABOUT -->
-              <section id="about" class="about-section">
+              <section id="about" class="about-section tag">
                      <h2 class="section-title">About</h2>
                      <hr>
                      <!-- <p>Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology</p> -->
@@ -121,14 +121,18 @@
                                    <p class="about-section-intro-para">
                                           Hey! It's
                                           <strong>Sumit Ujjwal</strong>
-                                          and I'm a Back-end Focused <strong>Full-Stack Web Developer</strong> building the Back-end of Websites
+                                          and I'm a Back-end Focused <strong>Full-Stack Web Developer</strong> building
+                                          the Back-end of Websites
                                           and Web Applications
-                                          that leads to the success of the overall product. Check out some of my work in the
+                                          that leads to the success of the overall product. Check out some of my work in
+                                          the
                                           <strong>Projects</strong> section.
                                    </p>
                                    <p class="about-section-intro-para">
-                                          I'm open to <strong>Job</strong> opportunities where I can contribute, learn and grow. If you have a
-                                          good opportunity that matches my skills and experience then don't hesitate to <strong>contact</strong>
+                                          I'm open to <strong>Job</strong> opportunities where I can contribute, learn
+                                          and grow. If you have a
+                                          good opportunity that matches my skills and experience then don't hesitate to
+                                          <strong>contact</strong>
                                           me.
                                    </p>
                             </div>
@@ -144,7 +148,7 @@
               </section>
 
               <!-- GITHUB STATS -->
-              <section id="github" class="github-section">
+              <section id="github" class="github-section tag">
                      <h2 class="section-title">GitHub Stats</h2>
                      <hr>
                      <div class="github-stats">
@@ -165,7 +169,7 @@
               </section>
 
               <!-- SKILLS -->
-              <section id="skills" class="skills-section">
+              <section id="skills" class="skills-section tag">
                      <h2 class="section-title">Skills</h2>
                      <hr>
                      <div class="skills-card">
@@ -183,96 +187,186 @@
               </section>
 
               <!-- PROJECTS -->
-              <section id="projects" class="projects-section">
+              <section id="projects" class="projects-section tag">
                      <h2 class="section-title">Projects</h2>
                      <hr>
                      <div class="box-container">
                             <div class="project-card">
-                                   <img src="./assets/project_1.png" width="100%" alt="" />
-                                   <h2 class="project-title">Car Zone</h2>
-                                   <hr>
-                                   <p class="project-description">
-                                          <span>Car Zone</span> is a clone of an e-commerce website Auto Zone, that
-                                          deals in
-                                          the sector of automotive parts and accessories.
-                                   </p>
-
-                                   <p>
-                                          <span>An individual project</span>build in a span of 5 days
-                                   </p>
-
-                                   <p class="project-tech-stack">
-                                          <span>Tech Stacks</span>
-                                          Node.js,Express.js,MongoDB,Mongoose,
-                                          Javascript,
-                                          HTML and
-                                          CSS
-
-                                   </p>
-                                   <div class="project-button">
-                                          <a href="https://github.com/SumitUjjwal/utopian-cover-8281" target="blank">
-                                                 <button class="btn project-github-link">Code <i
-                                                               class="fa-brands fa-github"></i></button>
-                                          </a>
-                                          <a href="https://project-car-zone.netlify.app/" target="blank">
-                                                 <button class="btn project-deployed-link">Live <i
-                                                               class="fa-brands fa-github"></i></button>
-                                          </a>
+                                   <div class="project-img" id="project-img">
+                                          <img src="./assets/project_1.png" alt="" class="project-image static" id="static" />
+                                          <img src="./assets/project-gif/project-car-zone.netlify (2).app-scroll_original"
+                                                 alt="" class="project-image active" id="active"/>
                                    </div>
+                                   <!-- <hr> -->
+                                   <div class="project-desc">
+                                          <h2 class="project-title">Car Zone</h2>
+                                          <p class="project-description">
+                                                 <span><strong>Car Zone</strong></span> is clone of an e-commerce
+                                                 website Auto Zone,
+                                                 that
+                                                 deals in
+                                                 the sector of automotive parts and accessories.
+                                          </p>
+
+                                          <p>
+                                                 <strong>Features: </strong>
+                                                 User registration and log-in using JWT and bcrypt
+                                                 • Search, sort and filter functionality
+                                                 • Admin page with CRUD operations
+                                          </p>
+
+                                          <p>
+                                                 <strong>Duration: </strong><span>An individual project</span> built in
+                                                 a span of 5 days
+                                          </p>
+
+                                          <p class="project-tech-stack">
+                                                 <span><strong>Tech Stacks: </strong></span>
+                                                 Node.js, Express.js, MongoDB, Mongoose,
+                                                 Javascript,
+                                                 HTML and
+                                                 CSS
+
+                                          </p>
+                                          <div class="project-button">
+                                                 <a href="https://github.com/SumitUjjwal/utopian-cover-8281"
+                                                        target="blank">
+                                                        <button class="btn project-github-link">Code <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                                 <a href="https://project-car-zone.netlify.app/" target="blank">
+                                                        <button class="btn project-deployed-link">Live <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                          </div>
+                                   </div>
+
+                            </div>
+
+                            <div class="project-card" >
+                                   <div class="project-img" id="project-img"><img src="./assets/project_2.png" alt=""
+                                                 class="project-image static" id="static"/><img
+                                                 src="./assets/project-gif/legendary-fairy-bc0edb.netlify.app-scroll_lossy-comp"
+                                                 alt="" class="project-image active" id="active"/></div>
+                                   <div class="project-desc">
+                                          <h2 class="project-title">Digital Basket</h2>
+                                          <!-- <hr> -->
+                                          <p class="project-description">
+                                                 <span><strong>Digital Basket</strong></span> is clone of an
+                                                 e-commerce website BestBuy,
+                                                 which
+                                                 sells
+                                                 various products in the field of electrical appliances.
+                                          </p>
+
+                                          <p>
+                                                 <strong>Features: </strong>
+                                                 Product discovery page
+                                                 • Product cart and checkout page
+                                                 • User registration, login and logout functionality
+                                                 • Admin panel
+                                                 <!-- <strong>Areas of responsibility:</strong>
+                                                 • Developed admin panel with CRUD operations.
+                                                 • Handled add-to-cart functionality using API.
+                                                 • Developed cart page and payment page. -->
+                                          </p>
+
+                                          <p>
+                                                 <strong>Duration: </strong><span>A Collaborative project</span> built
+                                                 in a span of 5 days
+                                          </p>
+
+                                          <p class="project-tech-stack">
+                                                 <span><strong>Tech Stacks: </strong></span>
+                                                 PostMan, MockAPI, Javascript,
+                                                 HTML and CSS
+
+                                          </p>
+                                          <div class="project-button">
+                                                 <a href="https://github.com/SumitUjjwal/obnoxious-ladybug-6279"
+                                                        target="blank">
+                                                        <button class="btn project-github-link">Code <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                                 <a href="https://legendary-fairy-bc0edb.netlify.app/" target="blank">
+                                                        <button class="btn project-deployed-link">Live <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                          </div>
+                                   </div>
+
                             </div>
 
                             <div class="project-card">
-                                   <img src="./assets/project_2.png" width="100%" alt="" />
-                                   <h2 class="project-title">Digital Basket</h2>
-                                   <hr>
-                                   <p class="project-description">
-                                          <span>Digital Basket</span> s a clone of an e-commerce website BestBuy, which
-                                          sells
-                                          various products in the field of electrical appliances.
-                                   </p>
+                                   <div class="project-img" id="project-img"><img src="./assets/project_1.png" alt=""
+                                                 class="project-image static" id="static"/><img
+                                                 src="./assets/project-gif/project-car-zone.netlify (1).app-scroll_original"
+                                                 alt="" class="project-image active" id="active"/></div>
+                                   <div class="project-desc">
+                                          <h2 class="project-title">Be You</h2>
+                                          <!-- <hr> -->
+                                          <p class="project-description">
+                                                 <span><strong>Be You</strong></span> is clone of an Indian e-commerce
+                                                 site MyGlamm,
+                                                 that
+                                                 deals with
+                                                 cosmetics and personal care products.
+                                          </p>
 
-                                   <p>
-                                          <span>A Collaborative project</span>build in a span of 5 days
-                                   </p>
+                                          <p>
+                                                 <strong>Features: </strong>
+                                                 User registration and log-in using JWT and bcrypt
+                                                 • Search, sort and filter functionality
+                                                 • Admin page with CRUD operations
+                                          </p>
 
-                                   <p class="project-tech-stack">
-                                          <span>Tech Stacks</span>
-                                          PostMan, MockAPI, Javascript,
-                                          HTML and CSS
+                                          <p>
+                                                 <strong>Duration: </strong><span>An individual project</span> built in
+                                                 a span of 5 days
+                                          </p>
 
-                                   </p>
-                                   <div class="project-button">
-                                          <a href="https://github.com/SumitUjjwal/obnoxious-ladybug-6279"
-                                                 target="blank">
-                                                 <button class="btn project-github-link">Code <i
-                                                               class="fa-brands fa-github"></i></button>
-                                          </a>
-                                          <a href="https://legendary-fairy-bc0edb.netlify.app/" target="blank">
-                                                 <button class="btn project-deployed-link">Live <i
-                                                               class="fa-brands fa-github"></i></button>
-                                          </a>
+                                          <p class="project-tech-stack">
+                                                 <span><strong>Tech Stacks: </strong></span>
+                                                 PostMan, MockAPI, Javascript,
+                                                 HTML and CSS
+                                          </p>
+                                          <div class="project-button">
+                                                 <a href="https://github.com/SumitUjjwal/apathetic-bikes-8091"
+                                                        target="blank">
+                                                        <button class="btn project-github-link">Code <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                                 <a href="https://bu-sumitujjwal-fw22-0065.netlify.app/" target="blank">
+                                                        <button class="btn project-deployed-link">Live <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                 </a>
+                                          </div>
                                    </div>
+
                             </div>
 
-                            <div class="project-card">
-                                   <img src="./assets/project_1.png" width="100%" alt="" />
-                                   <h2 class="project-title">Be You</h2>
-                                   <hr>
-                                   <p class="project-description">
-                                          <span>Be You</span> is a clone of an Indian e-commerce site MyGlamm, that
-                                          deals with
-                                          cosmetics and personal care products.
-                                   </p>
+                            <!-- <div class="project-card">
+                                   <div class="project-img"><img src="./assets/project_1.png" alt="" class="project-image" /></div>
+                                   <div class="project-desc">
+                                          <h2 class="project-title">Be You</h2>
+                                          
+                                          <p class="project-description">
+                                                 <span>Be You</span> is clone of an Indian e-commerce site MyGlamm,
+                                                 that
+                                                 deals with
+                                                 cosmetics and personal care products.
+                                          </p>
 
-                                   <p>
-                                          <span>An individual project</span>build in 5 days
-                                   </p>
+                                          <p>
+                                                 <strong>Duration: </strong><span>An individual project</span>build in 5 days
+                                          </p>
 
-                                   <p class="project-tech-stack">
-                                          <span>Tech Stacks</span>
-                                          PostMan, MockAPI, Javascript,
-                                          HTML and CSS
-                                   </p>
+                                          <p class="project-tech-stack">
+                                                 <span>Tech Stacks</span>
+                                                 PostMan, MockAPI, Javascript,
+                                                 HTML and CSS
+                                          </p>
+                                   </div>
                                    <div class="project-button">
                                           <a href="https://github.com/SumitUjjwal/apathetic-bikes-8091" target="blank">
                                                  <button class="btn project-github-link">Code <i
@@ -283,14 +377,14 @@
                                                                class="fa-brands fa-github"></i></button>
                                           </a>
                                    </div>
-                            </div>
+                            </div> -->
                      </div>
               </section>
 
 
 
               <!-- CONTACTS -->
-              <section id="contact" class="contact-section">
+              <section id="contact" class="contact-section tag">
                      <h2 class="section-title">Contact</h2>
                      <hr>
                      <a id="contact-github" href="https://github.com/SumitUjjwal">GitHub</a>
@@ -301,6 +395,7 @@
        </main>
 </body>
 <script src="./script/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
 
 </html>
