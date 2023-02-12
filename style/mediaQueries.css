@@ -91,7 +91,7 @@
 
     .shape {
         background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
-        animation: morph 12s ease-in-out infinite;
+        animation: morph 25s ease-in-out infinite;
         border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
         height: 200px;
         transition: all 1s ease-in-out;
