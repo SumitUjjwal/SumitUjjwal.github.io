@@ -1,5 +1,5 @@
 let ham_menu = document.querySelector("#ham-menu>span");
-let resume_btn = document.querySelector(".resume");
+let resume_btn = document.querySelectorAll(".resume");
 
 function openNav() {
     if (ham_menu.innerText == "menu") {
@@ -18,8 +18,10 @@ function closeNav() {
     ham_menu.innerText = "menu";
 }
 
-resume_btn.addEventListener("click", () => {
-    window.open("https://drive.google.com/file/d/1nFhA1j00JGnspzHS3UP5_AgFS2Icgm-j/view?usp=share_link");
+resume_btn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        window.open("https://drive.google.com/file/d/1nFhA1j00JGnspzHS3UP5_AgFS2Icgm-j/view?usp=share_link");
+    })
 })
 
 GitHubCalendar(".calendar", "sumitujjwal", {
