@@ -120,6 +120,23 @@
         font-size: 18px;
     }
 
+    .contact-button>button {
+        margin: 30px 0px;
+        border: 1px solid #667C89;
+        color: #ffffff;
+        background-color: #667C89;
+        border-radius: 5px;
+        height: 40px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    .contact-button>button:hover {
+        background-color: #667C89;
+        color: #ffffff;
+        border: none;
+    }
+
     #home>div>:nth-child(2) {
         /* border: 1px solid blue; */
         width: 90%;
@@ -396,7 +413,7 @@
 
     }
 
-    .contact-section>div>:nth-child(2){
+    .contact-section>div>:nth-child(2) {
         width: 90%;
     }
 
