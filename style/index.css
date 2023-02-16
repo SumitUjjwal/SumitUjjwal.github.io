@@ -199,7 +199,7 @@ main {
        align-items: center;
 }
 
-.contact-button>button {
+.contact-button>button, #resume-button-2 {
        margin: 30px 0px;
        border: 1px solid #667C89;
        color: #667C89;
@@ -210,7 +210,7 @@ main {
        font-size: 15px;
 }
 
-.contact-button>button:hover {
+.contact-button>button:hover, #resume-button-2:hover {
        background-color: #667C89;
        color: #ffffff;
        border: none;
@@ -240,6 +240,8 @@ main {
 .about-section-intro>:nth-child(1) {
        width: 50%;
        margin: 0 auto 100px;
+       /* margin: auto; */
+       text-align: center;
        /* height: ; */
 }
 
@@ -254,6 +256,11 @@ main {
        color: #667C89;
        font-size: 22px;
 }
+
+/* .contact-button{
+       margin: auto;
+       text-align: center;
+} */
 
 .about-section-intro-img {
        display: flex;
