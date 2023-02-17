@@ -77,14 +77,14 @@ toggle.addEventListener("click", () => {
     if(appearance == "light" || !appearance) {
         localStorage.setItem("appearance", "dark");
         console.log(appearance + " darkmode");
-        toggle_img.src = "../assets/toggle/dark_image.png"
+        // toggle_img.src = "../assets/toggle/dark_image.png"
         darkmode();
         location.reload();
     }
     else if(appearance == "dark") {
         localStorage.setItem("appearance", "light");
         console.log(appearance + " light mode");
-        toggle_img.src = "../assets/toggle/bright_image.png"
+        // toggle_img.src = "../assets/toggle/bright_image.png"
         location.reload();
         // lightmode();
     }
