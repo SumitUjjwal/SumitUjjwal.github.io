@@ -63,3 +63,88 @@ document.addEventListener("scroll", function () {
     }
 });
 
+// darkmode
+// localStorage.setItem("appearance", "light");
+const appearance = localStorage.getItem("appearance");
+const toggle = document.getElementById("appearance-toggle");
+const toggle_img = document.getElementById("toggle_img");
+
+if(appearance == "dark") {
+    darkmode();
+}
+
+toggle.addEventListener("click", () => {
+    if(appearance == "light" || !appearance) {
+        localStorage.setItem("appearance", "dark");
+        console.log(appearance + " darkmode");
+        toggle_img.src = "../assets/toggle/dark_image.png"
+        darkmode();
+        location.reload();
+    }
+    else if(appearance == "dark") {
+        localStorage.setItem("appearance", "light");
+        console.log(appearance + " light mode");
+        toggle_img.src = "../assets/toggle/bright_image.png"
+        location.reload();
+        // lightmode();
+    }
+    console.log("toggle")
+})
+
+function darkmode(){
+    // backgrounds
+    let backgrounds = document.querySelectorAll("body, #contact, #copyright, #projects, #home, #nav-menu, .sidenav");
+    backgrounds.forEach(element => {
+        element.style.backgroundColor = "#22272A";
+    })
+
+    // foregrounds
+    // nav elments
+    let navElem = document.querySelectorAll("nav a, nav button")
+    navElem.forEach(element => {
+        element.style.color = "#ffffff";
+    });
+
+    // ham icons
+    let ham_icons = document.querySelectorAll("#ham-menu>span")
+    ham_icons.forEach(element => {
+        element.style.color = "#ffffff";
+    });
+
+    // section titles
+    let section_titles = document.querySelectorAll(".section-title")
+    section_titles.forEach(element => {
+        element.style.color = "#ffffff";
+    });
+
+    // github stats
+    let github_streak = document.getElementById("github-streak-stats");
+    github_streak.src = "https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=dark&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D";
+
+
+    let github_topLangs = document.getElementById("github-top-langs");
+    github_topLangs.src = "https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal&theme=dark";
+
+
+    let github_stat = document.getElementById("github-stats-card");
+    github_stat.src = "https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true&theme=dark";
+
+
+    // project cards
+    let project_cards = document.querySelectorAll(".project-card")
+    project_cards.forEach(element => {
+        element.style.backgroundColor = "#000000";
+    });
+
+    // contacts box
+    let contact_box = document.querySelectorAll(".contact-section>div")
+    contact_box.forEach(element => {
+        element.style.backgroundColor = "#000000";
+    });
+
+    // contacts form inputs
+    let contact_input = document.querySelectorAll(".contact-form>form>input, .contact-form>form>textarea")
+    contact_input.forEach(element => {
+        element.style.backgroundColor = "#22272A";
+    });
+}
