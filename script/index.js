@@ -64,34 +64,35 @@ document.addEventListener("scroll", function () {
 });
 
 // darkmode
-// localStorage.setItem("appearance", "light");
 const appearance = localStorage.getItem("appearance");
 const toggle = document.getElementById("appearance-toggle");
 const toggle_img = document.getElementById("toggle_img");
 
-if(appearance == "dark") {
+if (appearance == "dark") {
+    toggle_img.src = "../assets/toggle/bright_image.png";
+    toggle_img.alt = "bright";
     darkmode();
+} else {
+    toggle_img.src = "../assets/toggle/dark_image.png";
+    toggle_img.alt = "dark";
 }
 
 toggle.addEventListener("click", () => {
-    if(appearance == "light" || !appearance) {
+    if (appearance == "light" || !appearance) {
         localStorage.setItem("appearance", "dark");
         console.log(appearance + " darkmode");
-        // toggle_img.src = "../assets/toggle/dark_image.png"
         darkmode();
         location.reload();
     }
-    else if(appearance == "dark") {
+    else if (appearance == "dark") {
         localStorage.setItem("appearance", "light");
         console.log(appearance + " light mode");
-        // toggle_img.src = "../assets/toggle/bright_image.png"
         location.reload();
-        // lightmode();
     }
     console.log("toggle")
 })
 
-function darkmode(){
+function darkmode() {
     // backgrounds
     let backgrounds = document.querySelectorAll("body, #contact, #copyright, #projects, #home, #nav-menu, .sidenav");
     backgrounds.forEach(element => {
