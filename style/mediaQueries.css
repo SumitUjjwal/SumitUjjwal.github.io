@@ -115,10 +115,10 @@
         /* border: 1px solid green; */
     }
 
-    #user-detail-intro {
-        /* border: 1px solid blue; */
+    /* #user-detail-intro {
+        border: 1px solid blue;
         font-size: 18px;
-    }
+    } */
 
     .contact-button>button {
         margin: 30px 0px;
