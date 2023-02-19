@@ -1,3 +1,5 @@
+// const { application } = require("express");
+
 let ham_menu = document.querySelector("#ham-menu>span");
 let resume_btn = document.querySelectorAll(".resume");
 
@@ -89,7 +91,7 @@ toggle.addEventListener("click", () => {
         console.log(appearance + " light mode");
         location.reload();
     }
-    console.log("toggle")
+    console.log("toggle");
 })
 
 function darkmode() {
@@ -149,3 +151,43 @@ function darkmode() {
         element.style.backgroundColor = "#22272A";
     });
 }
+
+// nodemailer
+let form = document.querySelector("form");
+
+form.addEventListener("submit", async(event) => {
+    event.preventDefault();
+    let contact_input_name = document.getElementById("contact-input-name").value;
+    let contact_input_email = document.getElementById("contact-input-email").value;
+    let contact_input_subject = document.getElementById("contact-input-subject").value;
+    let contact_input_message = document.getElementById("contact-input-message").value;
+    let contact_input_button = document.getElementById("contact-input-button");
+    contact_input_button.innerHTML = `<i class="fa fa-spinner fa-spin"></i>Sending`;
+    // console.log(contact_input_name, contact_input_email, contact_input_subject, contact_input_message);
+
+    let obj = {
+        name: contact_input_name,
+        email: contact_input_email,
+        subject: contact_input_subject,
+        message: contact_input_message
+    }
+
+    console.log(obj);
+
+    let request = await fetch("https://cute-puce-dragonfly-hose.cyclic.app/messages", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        },
+        body: JSON.stringify(obj)
+    })
+    // contact_input_button.innerHTML = "<i class=fa fa-circle-o-notch fa-spin></i>Sending";
+    let response = await request.json();
+    // console.log(response);
+    if(response.okay){
+        contact_input_button.innerHTML = "Send";
+        alert(`Thanks ${obj.name} for your message! \n Will get back to you soon!`);
+    }else{
+        alert(`Error in sending message! \n Please contact me through Linkedin!`);
+    }
+})

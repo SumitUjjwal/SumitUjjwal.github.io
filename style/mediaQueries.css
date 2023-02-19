@@ -539,6 +539,19 @@
     .copyright-section>p {
         font-size: 13px;
     }
+
+    #appearance-toggle {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #appearance-toggle>img {
+        width: 35px;
+        padding: 20%;
+        box-shadow: #667C89 0px 3px 8px;
+        border-radius: 50%;
+    }
 }
 
 @media (max-width: 350px) {
