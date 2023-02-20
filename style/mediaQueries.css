@@ -120,7 +120,8 @@
         font-size: 18px;
     } */
 
-    .contact-button>button {
+    .contact-button>button,
+    #resume-button-2 {
         margin: 30px 0px;
         border: 1px solid #667C89;
         color: #ffffff;
@@ -131,11 +132,11 @@
         font-size: 15px;
     }
 
-    .contact-button>button:hover {
+    /* .contact-button>button:hover {
         background-color: #667C89;
         color: #ffffff;
         border: none;
-    }
+    } */
 
     #home>div>:nth-child(2) {
         /* border: 1px solid blue; */
@@ -520,7 +521,7 @@
         outline: none;
     }
 
-    .contact-form>form>input[type="submit"] {
+    .contact-form>form>button {
         margin: auto;
         height: 40px;
         width: 40%;
@@ -531,7 +532,7 @@
         color: #616161;
     }
 
-    .contact-form>form>input[type="submit"]:hover {
+    .contact-form>form>button:hover {
         background-color: #667C89;
         color: #ffffff;
     }

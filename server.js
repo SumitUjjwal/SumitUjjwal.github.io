@@ -24,11 +24,11 @@ app.post("/messages", async(req, res) => {
     transporter.sendMail({
         to: "sumitujjwal.work@gmail.com",
         // from: "sumit@scratch.com",
-        subject: `${subject} - ${name}, `,
+        subject: `${subject} - ${name}`,
         text: `from: ${email} \n message: ${message}`
     }).then(async () => {
         console.log("Email sent successfully");
-        // res.cookie("otp", OTP)
+        // res.cookie("otp", OTP);
         res.json({ "msg": "Email sent successfully", "okay": true });
         // next();
     })

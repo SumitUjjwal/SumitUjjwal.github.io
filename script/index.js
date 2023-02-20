@@ -146,7 +146,7 @@ function darkmode() {
     });
 
     // contacts form inputs
-    let contact_input = document.querySelectorAll(".contact-form>form>input, .contact-form>form>textarea")
+    let contact_input = document.querySelectorAll(".contact-form>form>input, .contact-form>form>textarea, .contact-form>form>button")
     contact_input.forEach(element => {
         element.style.backgroundColor = "#22272A";
     });
@@ -154,6 +154,8 @@ function darkmode() {
 
 // nodemailer
 let form = document.querySelector("form");
+// let url = "https://cute-puce-dragonfly-hose.cyclic.app";
+let url = "http://localhost:2020";
 
 form.addEventListener("submit", async(event) => {
     event.preventDefault();
@@ -174,7 +176,7 @@ form.addEventListener("submit", async(event) => {
 
     console.log(obj);
 
-    let request = await fetch("https://cute-puce-dragonfly-hose.cyclic.app/messages", {
+    let request = await fetch(`${url}/messages`, {
         method: "POST",
         headers: {
             "Content-type": "application/json; charset=UTF-8"
@@ -183,7 +185,7 @@ form.addEventListener("submit", async(event) => {
     })
     // contact_input_button.innerHTML = "<i class=fa fa-circle-o-notch fa-spin></i>Sending";
     let response = await request.json();
-    // console.log(response);
+    console.log(response);
     if(response.okay){
         contact_input_button.innerHTML = "Send";
         alert(`Thanks ${obj.name} for your message! \n Will get back to you soon!`);
