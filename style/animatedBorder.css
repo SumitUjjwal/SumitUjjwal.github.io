@@ -29,19 +29,20 @@
 .shape {
     background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
     animation: morph 25s ease-in-out infinite;
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    /* border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; */
+    border-radius: 7%;
     height: 400px;
     transition: all 1s ease-in-out;
     width: 400px;
     z-index: 2;
-    /* padding-top: 50%; */
+    /* padding: 5%; */
 }
 
 /* .container>img{
     width: 250%;
 } */
 
-@keyframes morph {
+/* @keyframes morph {
     0% {
         border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%;
         background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
@@ -56,4 +57,4 @@
         border-radius: 5% 5% 5% 5% / 5% 5% 5% 5%;
         background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
     }
-}
+} */
