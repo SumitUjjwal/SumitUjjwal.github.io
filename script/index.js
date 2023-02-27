@@ -103,15 +103,15 @@ function darkmode() {
 
     // foregrounds
     // nav elments
-    let navElem = document.querySelectorAll("nav a, nav button")
-    navElem.forEach(element => {
-        element.style.color = "#ffffff";
-    });
+    // let navElem = document.querySelectorAll("nav a, nav button")
+    // navElem.forEach(element => {
+    //     element.style.color = "#ffffff";
+    // });
 
     // ham icons
     let ham_icons = document.querySelectorAll("#ham-menu>span")
     ham_icons.forEach(element => {
-        element.style.color = "#ffffff";
+        element.style.color = "#667C89";
     });
 
     // section titles
@@ -120,24 +120,63 @@ function darkmode() {
         element.style.color = "#ffffff";
     });
 
+    // home section
+    let home = document.getElementById("home");
+    home.style.backgroundColor = "#22272A";
+    home.style.backgroundImage = "url(../assets/background/endless-constellation.svg)";
+
     // github stats
     let github_streak = document.getElementById("github-streak-stats");
     github_streak.src = "https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=dark&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D";
 
 
     let github_topLangs = document.getElementById("github-top-langs");
-    github_topLangs.src = "https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal&theme=dark";
+    github_topLangs.src = "https://github-readme-stats.vercel.app/api/top-langs/?username=sumitujjwal&layout=compact&theme=dark";
 
 
     let github_stat = document.getElementById("github-stats-card");
     github_stat.src = "https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true&theme=dark";
 
+    // skill cards
+    let skill_cards = document.querySelectorAll(".skills-card");
+    skill_cards.forEach(skill_card => {
+        skill_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        skill_card.addEventListener("mouseover", () => {
+            skill_card.style.boxShadow = "#fff 0px 3px 8px";
+        })
+        skill_card.addEventListener("mouseout", () => {
+            skill_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        })
+    });
+
+    // tools cards
+    let tool_cards = document.querySelectorAll(".tools-card");
+    tool_cards.forEach(tool_card => {
+        tool_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        tool_card.addEventListener("mouseover", () => {
+            tool_card.style.boxShadow = "#fff 0px 3px 8px";
+        })
+        tool_card.addEventListener("mouseout", () => {
+            tool_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        })
+    });
 
     // project cards
     let project_cards = document.querySelectorAll(".project-card")
     project_cards.forEach(element => {
         element.style.backgroundColor = "#000000";
+        element.addEventListener("mouseover", () => {
+            element.style.boxShadow = "#fff 0px 3px 8px";
+        })
+        element.addEventListener("mouseout", () => {
+            element.style.boxShadow = "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px";
+        })
     });
+
+    // contact section
+    let contact = document.getElementById("contact");
+    contact.style.backgroundColor = "#22272A";
+    contact.style.backgroundImage = "url(../assets/background/endless-constellation.svg)";
 
     // contacts box
     let contact_box = document.querySelectorAll(".contact-section>div")
@@ -150,6 +189,62 @@ function darkmode() {
     contact_input.forEach(element => {
         element.style.backgroundColor = "#22272A";
     });
+
+    // contact section
+    let copyright = document.getElementById("copyright");
+    copyright.style.backgroundColor = "#22272A";
+    copyright.style.backgroundImage = "url(../assets/background/endless-constellation.svg)";
+}
+
+// fixed social icons
+window.addEventListener("resize", () => {
+    let width = screen.width;
+    let social_icons_box = document.getElementById("fixed-social-icons");
+    if (width < 700) {
+        social_icons_box.innerHTML = `
+            <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-lg"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-lg"></i></a>
+            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-lg"></i></a>
+            <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-lg"></i></a>
+        `;
+        social_icons_box.style.gap = "20px";
+        social_icons_box.style.left = "5px";
+    } else {
+        social_icons_box.innerHTML = `
+            <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
+            <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-2xl"></i></a>
+        `;
+        social_icons_box.style.gap = "50px";
+        social_icons_box.style.left = "10px";
+    }
+})
+
+let width = screen.width;
+let social_icons_box = document.getElementById("fixed-social-icons");
+if (width < 700) {
+    social_icons_box.innerHTML = `
+            <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-lg"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-lg"></i></a>
+            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-lg"></i></a>
+            <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-lg"></i></a>
+        `;
+    social_icons_box.style.gap = "20px";
+    social_icons_box.style.left = "5px";
+} else {
+    social_icons_box.innerHTML = `
+            <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
+            <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-2xl"></i></a>
+        `;
+    social_icons_box.style.gap = "50px";
+    social_icons_box.style.left = "10px";
 }
 
 // nodemailer
@@ -157,7 +252,7 @@ let form = document.querySelector("form");
 // let url = "https://cute-puce-dragonfly-hose.cyclic.app";
 let url = "http://localhost:2020";
 
-form.addEventListener("submit", async(event) => {
+form.addEventListener("submit", async (event) => {
     event.preventDefault();
     let contact_input_name = document.getElementById("contact-input-name").value;
     let contact_input_email = document.getElementById("contact-input-email").value;
@@ -186,10 +281,10 @@ form.addEventListener("submit", async(event) => {
     // contact_input_button.innerHTML = "<i class=fa fa-circle-o-notch fa-spin></i>Sending";
     let response = await request.json();
     console.log(response);
-    if(response.okay){
+    if (response.okay) {
         contact_input_button.innerHTML = "Send";
         alert(`Thanks ${obj.name} for your message! \n Will get back to you soon!`);
-    }else{
+    } else {
         alert(`Error in sending message! \n Please contact me through Linkedin!`);
     }
 })
