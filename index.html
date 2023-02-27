@@ -18,7 +18,8 @@
               rel="stylesheet" />
        <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+       <script src="https://kit.fontawesome.com/79354b38b3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -81,7 +82,7 @@
               <section id="home" class="home-section">
                      <div>
                             <div>
-                                   <h1 id="user-detail-name">Hi, I'm Sumit Ujjwal</h1>
+                                   <p id="user-detail-name">Hi, I'm <span>Sumit Ujjwal</span></p>
                                    <p>Full Stack Web Developer</p>
                                    <p><q>Passionate about coding and Problem Solving...</q></p>
 
@@ -89,13 +90,10 @@
                                    <div class="achievement">
                                           <div class="ach">
                                                  <strong>3+</strong>
-                                                 <!-- <h1>3+</h1> -->
                                                  <span>Completed Projects</span>
                                           </div>
-                                          <!--  -->
                                           <div class="ach">
                                                  <strong>300+</strong>
-                                                 <!-- <h1>300+</h1> -->
                                                  <span>Solved DSA Problems</span>
                                           </div>
                                    </div>
@@ -160,7 +158,7 @@
                                    src="https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=vue&border_radius=6.5&date_format=M%20j%5B%2C%20Y%5D"
                                    alt="streakstat">
                             <img id="github-top-langs"
-                                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal&theme=vue"
+                                   src="https://github-readme-stats.vercel.app/api/top-langs/?username=sumitujjwal&layout=compact&theme=vue"
                                    alt="top_languages">
                             <img id="github-stats-card"
                                    src="https://github-readme-stats.vercel.app/api?username=SumitUjjwal&count_private=true&theme=vue"
@@ -177,45 +175,50 @@
                      <h2 class="section-title">Skills</h2>
                      <hr>
                      <div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/html5_icon.svg"
                                           alt="Skill_1">
                                    <p class="skills-card-name">HTML</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/css3_icon.svg"
                                           alt="Skill_2">
                                    <p class="skills-card-name">CSS</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/javascript_icon.svg"
                                           alt="Skill_3">
                                    <p class="skills-card-name">JavaScript</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/node-js_icon.svg"
                                           alt="Skill_4">
                                    <p class="skills-card-name">Node.js</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/express-js_icon.svg"
                                           alt="Skill_5">
                                    <p class="skills-card-name">Express.js</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/MongoDB_icon.svg"
                                           alt="Skill_6">
                                    <p class="skills-card-name">MongoDB</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/socketio_icon.svg"
                                           alt="Skill_7">
                                    <p class="skills-card-name">Socket.io</p>
                             </div>
-                            <div class="skills-card">
+                            <div class="skills-card" id="skills-card">
                                    <img class="skills-card-img" src="./assets/tech-stacks-tools/redis_icon.svg"
                                           alt="Skill_8">
                                    <p class="skills-card-name">Redis</p>
+                            </div>
+                            <div class="skills-card" id="skills-card">
+                                   <img class="skills-card-img" src="./assets/tech-stacks-tools/chartjs-logo.svg"
+                                          alt="Skill_8">
+                                   <p class="skills-card-name">Chart.js</p>
                             </div>
                      </div>
                      <!-- TOOLS -->
@@ -294,12 +297,14 @@
                                                         the sector of automotive parts and accessories.
                                                  </p>
 
-                                                 <p>
-                                                        <strong>Features: </strong>
-                                                        User registration and log-in using JWT and bcrypt
-                                                        • Search, sort and filter functionality
-                                                        • Admin page with CRUD operations
-                                                 </p>
+                                                 <div class="project-features">
+                                                        <p><strong>Features: </strong></p>
+                                                        <div>
+                                                               <p>• Search, sort and filter functionality</p>
+                                                               <p>• Admin page with CRUD operations</p>
+                                                               <p>• User registration and log-in using JWT and bcrypt</p>
+                                                        </div>
+                                                 </div>
 
                                                  <p>
                                                         <strong>Duration: </strong><span>An individual project</span>
@@ -322,8 +327,56 @@
                                                                              class="fa-brands fa-github"></i></button>
                                                         </a>
                                                         <a href="https://project-car-zone.netlify.app/" target="blank">
-                                                               <button class="btn project-deployed-link">Live <i
-                                                                             class="fa-brands fa-github"></i></button>
+                                                               <button class="btn project-deployed-link">Live <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
+                                                        </a>
+                                                 </div>
+                                          </div>
+
+                                   </div>
+
+                                   <div class="project-card">
+                                          <div class="project-img" id="project-img"><img src="./assets/project_4.png"
+                                                        alt="" class="project-image static" id="static" /><img
+                                                        src="./assets/project-gif/lillyput.vercel.app-scroll_lossy-comp"
+                                                        alt="" class="project-image active" id="active" /></div>
+                                          <div class="project-desc">
+                                                 <h2 class="project-title">LillyPut</h2>
+                                                 <!-- <hr> -->
+                                                 <p class="project-description">
+                                                        <span><strong>LillyPut</strong></span> is an URL shortener with
+                                                        analysis that not only shortens the URL but also allows
+                                                        clients to have full anlytical data like location,
+                                                        device, platform, etc.
+                                                 </p>
+
+                                                 <div class="project-features">
+                                                        <p><strong>Areas of Responsibility: </strong></p>
+                                                        <div>
+                                                               <p>• Search Functionality</p>
+                                                               <p>• User registration and log-in</p>
+                                                               <p>• Add to cart functionality</p>
+                                                        </div>
+                                                 </div>
+
+                                                 <p>
+                                                        <strong>Duration: </strong><span>A Collaborative project</span>
+                                                        built in
+                                                        a span of 5 days
+                                                 </p>
+
+                                                 <p class="project-tech-stack">
+                                                        <span><strong>Tech Stacks: </strong></span>
+                                                        NodeJS, ExpressJS, MongoDB, Mongoose, Redis, ChartJS, HTML, CSS and JavaScript
+                                                 </p>
+                                                 <div class="project-button">
+                                                        <a href="https://github.com/SumitUjjwal/cruel-team-7846"
+                                                               target="blank">
+                                                               <button class="btn project-github-link">Code <i
+                                                                      class="fa-brands fa-github"></i></button>
+                                                        </a>
+                                                        <a href="https://lillyput.vercel.app/"
+                                                               target="blank">
+                                                               <button class="btn project-deployed-link">Live <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
                                                         </a>
                                                  </div>
                                           </div>
@@ -346,17 +399,14 @@
                                                         various products in the field of electrical appliances.
                                                  </p>
 
-                                                 <p>
-                                                        <strong>Features: </strong>
-                                                        Product discovery page
-                                                        • Product cart and checkout page
-                                                        • User registration, login and logout functionality
-                                                        • Admin panel
-                                                        <!-- <strong>Areas of responsibility:</strong>
-                                                 • Developed admin panel with CRUD operations.
-                                                 • Handled add-to-cart functionality using API.
-                                                 • Developed cart page and payment page. -->
-                                                 </p>
+                                                 <div class="project-features">
+                                                        <p><strong>Areas of Responsibility: </strong></p>
+                                                        <div>
+                                                               <p>• Developed cart page and payment page.</p>
+                                                               <p>• Developed admin panel with CRUD operations</p>
+                                                               <p>• Handled add-to-cart functionality using API.</p>
+                                                        </div>
+                                                 </div>
 
                                                  <p>
                                                         <strong>Duration: </strong><span>A Collaborative project</span>
@@ -378,8 +428,7 @@
                                                         </a>
                                                         <a href="https://legendary-fairy-bc0edb.netlify.app/"
                                                                target="blank">
-                                                               <button class="btn project-deployed-link">Live <i
-                                                                             class="fa-brands fa-github"></i></button>
+                                                               <button class="btn project-deployed-link">Live <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
                                                         </a>
                                                  </div>
                                           </div>
@@ -387,9 +436,9 @@
                                    </div>
 
                                    <div class="project-card">
-                                          <div class="project-img" id="project-img"><img src="./assets/project_1.png"
+                                          <div class="project-img" id="project-img"><img src="./assets/project_3.png"
                                                         alt="" class="project-image static" id="static" /><img
-                                                        src="./assets/project-gif/project-car-zone.netlify (1).app-scroll_original"
+                                                        src="./assets/project-gif/be-you-cwp.netlify.app-scroll_lossy-comp"
                                                         alt="" class="project-image active" id="active" /></div>
                                           <div class="project-desc">
                                                  <h2 class="project-title">Be You</h2>
@@ -403,12 +452,14 @@
                                                         cosmetics and personal care products.
                                                  </p>
 
-                                                 <p>
-                                                        <strong>Features: </strong>
-                                                        User registration and log-in using JWT and bcrypt
-                                                        • Search, sort and filter functionality
-                                                        • Admin page with CRUD operations
-                                                 </p>
+                                                 <div class="project-features">
+                                                        <p><strong>Features: </strong></p>
+                                                        <div>
+                                                               <p>• Search Functionality</p>
+                                                               <p>• User registration and log-in</p>
+                                                               <p>• Add to cart functionality</p>
+                                                        </div>
+                                                 </div>
 
                                                  <p>
                                                         <strong>Duration: </strong><span>An individual project</span>
@@ -427,66 +478,16 @@
                                                                <button class="btn project-github-link">Code <i
                                                                              class="fa-brands fa-github"></i></button>
                                                         </a>
-                                                        <a href="https://bu-sumitujjwal-fw22-0065.netlify.app/"
+                                                        <a href="https://be-you-cwp.netlify.app/"
                                                                target="blank">
-                                                               <button class="btn project-deployed-link">Live <i
-                                                                             class="fa-brands fa-github"></i></button>
+                                                               <button class="btn project-deployed-link">Live <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
                                                         </a>
                                                  </div>
                                           </div>
 
                                    </div>
 
-                                   <div class="project-card">
-                                          <div class="project-img" id="project-img"><img src="./assets/project_1.png"
-                                                        alt="" class="project-image static" id="static" /><img
-                                                        src="./assets/project-gif/project-car-zone.netlify (1).app-scroll_original"
-                                                        alt="" class="project-image active" id="active" /></div>
-                                          <div class="project-desc">
-                                                 <h2 class="project-title">Be You</h2>
-                                                 <!-- <hr> -->
-                                                 <p class="project-description">
-                                                        <span><strong>Be You</strong></span> is a clone of an
-                                                        e-commerce
-                                                        site MyGlamm,
-                                                        that
-                                                        deals with
-                                                        cosmetics and personal care products.
-                                                 </p>
 
-                                                 <p>
-                                                        <strong>Features: </strong>
-                                                        User registration and log-in using JWT and bcrypt
-                                                        • Search, sort and filter functionality
-                                                        • Admin page with CRUD operations
-                                                 </p>
-
-                                                 <p>
-                                                        <strong>Duration: </strong><span>An individual project</span>
-                                                        built in
-                                                        a span of 5 days
-                                                 </p>
-
-                                                 <p class="project-tech-stack">
-                                                        <span><strong>Tech Stacks: </strong></span>
-                                                        PostMan, MockAPI, Javascript,
-                                                        HTML and CSS
-                                                 </p>
-                                                 <div class="project-button">
-                                                        <a href="https://github.com/SumitUjjwal/apathetic-bikes-8091"
-                                                               target="blank">
-                                                               <button class="btn project-github-link">Code <i
-                                                                             class="fa-brands fa-github"></i></button>
-                                                        </a>
-                                                        <a href="https://bu-sumitujjwal-fw22-0065.netlify.app/"
-                                                               target="blank">
-                                                               <button class="btn project-deployed-link">Live <i
-                                                                             class="fa-brands fa-github"></i></button>
-                                                        </a>
-                                                 </div>
-                                          </div>
-
-                                   </div>
                             </div>
                      </div>
               </section>
@@ -499,18 +500,18 @@
                             <div id="contact-link" class="contact-link">
                                    <!-- <p>Connect with me on</p> -->
                                    <div>
-                                          <a id="contact-github" href="https://github.com/SumitUjjwal"><span><img
-                                                               src="./assets/tech-stacks-tools/github-mark-white.svg"
-                                                               alt=""></span>Github</a>
-                                          <a id="contact-linkedin" href="https://www.linkedin.com/in/sumitujjwal/"><img
+                                          <a target="_blank" id="contact-github" href="https://github.com/SumitUjjwal"><img
+                                                        src="./assets/tech-stacks-tools/github-mark-white.svg"
+                                                        alt=""><span>Github</span></a>
+                                          <a target="_blank" id="contact-linkedin" href="https://www.linkedin.com/in/sumitujjwal/"><img
                                                         src="./assets/tech-stacks-tools/In-White-128.png"
-                                                        alt="">Linkedin</a>
-                                          <a id="contact-phone" href="tel:+918789223801"><img
-                                                        src="./assets/tech-stacks-tools/phone_icon.png" alt="">+91
-                                                 8789223801</a>
-                                          <a id="contact-email" href="mailto:sumitujjwal.work@gmail.com"><img
+                                                        alt=""><span>Github</span></a>
+                                          <a target="_blank" id="contact-phone" href="tel:+918789223801"><img
+                                                        src="./assets/tech-stacks-tools/phone_icon.png" alt=""><span>+91
+                                                        8789223801</span></a>
+                                          <a target="_blank" id="contact-email" href="mailto:sumitujjwal.work@gmail.com"><img
                                                         src="./assets/tech-stacks-tools/email_icon.png"
-                                                        alt="">sumitujjwal.work@gmail.com</a>
+                                                        alt=""><span>sumitujjwal.work@gmail.com</span></a>
                                    </div>
                             </div>
                             <hr>
@@ -541,8 +542,19 @@
 
               <!-- TOGGLE -->
               <section id="toggle" class="toggle">
-                     <div id="appearance-toggle">
+                     <div id="appearance-toggle" class="appearance-toggle">
                             <img id="toggle_img" src="" alt="">
+                     </div>
+              </section>
+
+              <!-- FIXED ICONS -->
+              <section id="fixed-icon" class="fixed-icon">
+                     <div id="fixed-social-icons" class="fixed-social-icon">
+                            <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-2xl"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+                            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
+                            <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-2xl"></i></a>
                      </div>
               </section>
        </main>
