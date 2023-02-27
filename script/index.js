@@ -249,8 +249,8 @@ if (width < 700) {
 
 // nodemailer
 let form = document.querySelector("form");
-// let url = "https://cute-puce-dragonfly-hose.cyclic.app";
-let url = "http://localhost:2020";
+let url = "https://cute-puce-dragonfly-hose.cyclic.app";
+// let url = "http://localhost:2020";
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
