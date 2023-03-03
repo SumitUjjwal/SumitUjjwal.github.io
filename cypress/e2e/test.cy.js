@@ -73,7 +73,7 @@ describe("Test", function () {
 
       it(`Check if navbar components are linked to respective elements`, () => {
         cy.isInViewport("#nav-menu");
-        cy.get(".nav-link.about", { multiple: true }).first().click();
+        cy.get(".nav-link.about", { multiple: true }).click();
         cy.isScrolledTo("#about");
         cy.then(() => {
           acc_score += 1;
@@ -81,7 +81,7 @@ describe("Test", function () {
 
         cy.visit(url);
         cy.isInViewport("#nav-menu");
-        cy.get(".nav-link.skills", { multiple: true }).first().click();
+        cy.get(".nav-link.skills", { multiple: true }).click();
         cy.isScrolledTo("#skills");
         cy.then(() => {
           acc_score += 1;
@@ -89,7 +89,7 @@ describe("Test", function () {
 
         cy.visit(url);
         cy.isInViewport("#nav-menu");
-        cy.get(".nav-link.projects", { multiple: true }).first().click();
+        cy.get(".nav-link.projects", { multiple: true }).click();
         cy.isScrolledTo("#projects");
         cy.then(() => {
           acc_score += 1;
@@ -97,14 +97,14 @@ describe("Test", function () {
 
         cy.visit(url);
         cy.isInViewport("#nav-menu");
-        cy.get(".nav-link.contact", { multiple: true }).first().click();
+        cy.get(".nav-link.contact", { multiple: true }).click();
         cy.isScrolledTo("#contact");
         cy.then(() => {
           acc_score += 1;
         });
 
         cy.isInViewport("#nav-menu");
-        cy.get(".nav-link.home", { multiple: true }).first().click();
+        cy.get(".nav-link.home", { multiple: true }).click();
         cy.isScrolledTo("#home");
         cy.then(() => {
           acc_score += 1;
