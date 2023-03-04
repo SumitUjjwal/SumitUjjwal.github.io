@@ -758,3 +758,23 @@ a {
 .fixed-social-icon>a {
        color: #667C89;
 }
+
+.fixed-social-icon>:nth-child(1):hover{
+       color: #000000;
+}
+
+.fixed-social-icon>:nth-child(2):hover{
+       color: #0A66C2;
+}
+
+.fixed-social-icon>:nth-child(3):hover{
+       color: #00A884;
+}
+
+.fixed-social-icon>:nth-child(4):hover{
+       color: #1A73E8;
+}
+
+.fixed-social-icon>:nth-child(5):hover{
+       color: #EA4335;
+}
