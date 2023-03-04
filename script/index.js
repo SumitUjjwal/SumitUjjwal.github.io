@@ -34,20 +34,44 @@ GitHubCalendar(".calendar", "sumitujjwal", {
 
 // project-image hover events
 let projectImg = document.querySelectorAll(".project-img");
-for (let i = 0; i < projectImg.length; i++) {
-    projectImg[i].addEventListener("mouseover", function () {
+// for (let i = 0; i < projectImg.length; i++) {
+//     projectImg[i].addEventListener("mouseover", function () {
+//         projectImg[i].firstElementChild.style.display = "none";
+//         projectImg[i].lastElementChild.style.display = "block";
+//         console.log("static_img.style.display")
+//     });
+
+//     projectImg[i].addEventListener("mouseout", function () {
+//         projectImg[i].firstElementChild.style.display = "block";
+//         projectImg[i].lastElementChild.style.display = "none";
+//         console.log("out")
+//     });
+// }
+
+let projectcard = document.querySelectorAll(".project-card");
+for (let i = 0; i < projectcard.length; i++) {
+    projectcard[i].addEventListener("mouseover", () => {
         projectImg[i].firstElementChild.style.display = "none";
         projectImg[i].lastElementChild.style.display = "block";
-        console.log("static_img.style.display")
-    });
-
-    projectImg[i].addEventListener("mouseout", function () {
+    })
+    projectcard[i].addEventListener("mouseout", () => {
         projectImg[i].firstElementChild.style.display = "block";
         projectImg[i].lastElementChild.style.display = "none";
-        console.log("out")
-    });
-}
+    })
+    // for (let i = 0; i < projectImg.length; i++) {
+    //     projectImg[i].addEventListener("mouseover", function () {
+    //         projectImg[i].firstElementChild.style.display = "none";
+    //         projectImg[i].lastElementChild.style.display = "block";
+    //         console.log("static_img.style.display")
+    //     });
 
+    //     projectImg[i].addEventListener("mouseout", function () {
+    //         projectImg[i].firstElementChild.style.display = "block";
+    //         projectImg[i].lastElementChild.style.display = "none";
+    //         console.log("out")
+    //     });
+    // }
+}
 
 // fade-in effect while scrolling
 document.addEventListener("scroll", function () {
