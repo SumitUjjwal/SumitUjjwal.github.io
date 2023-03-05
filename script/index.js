@@ -1,5 +1,32 @@
 // const { application } = require("express");
 
+// // LOADER
+// window.addEventListener("load", () => {
+//     // let body = document.querySelector("body");
+//     // body.innerHTML = ""
+//     // body.innerHTML = `
+//     //     <div class="windown-loader">
+//     //         <img src="./assets/Infinity-loader-dark.gif" alt="">
+//     //     </div>
+//     //     `;
+//     let loader = document.getElementById("windown-loader");
+//     let progress = document.getElementById("progress");
+//     let navigation = document.getElementById("nav-menu");
+//     let main = document.querySelector("main");
+
+//     loader.style.display = "block";
+//     progress.style.display = "none";
+//     navigation.style.display = "none";
+//     main.style.display = "none";
+
+//     setTimeout(() => {
+//         loader.style.display = "none";
+//         progress.style.display = "block";
+//         navigation.style.display = "block";
+//         main.style.display = "block";
+//     }, 2000);
+// })
+
 // PROGRESS BAR
 function progress() {
     var windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;

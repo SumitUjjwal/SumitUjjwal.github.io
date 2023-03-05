@@ -61,7 +61,11 @@ a {
        transition: background 0.15s ease;
 }
 
-
+/* WINDOW LOADER */
+/* .window-loader{
+       border: 1px solid ;
+       display: none;
+} */
 
 /* Navigation */
 
