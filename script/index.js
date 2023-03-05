@@ -1,5 +1,28 @@
 // const { application } = require("express");
 
+// PROGRESS BAR
+function progress() {
+    var windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    var docHeight = Math.max(
+        document.body.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.clientHeight,
+        document.documentElement.scrollHeight,
+        document.documentElement.offsetHeight
+    );
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+    const progress_bar = document.getElementById("progress");
+    progress_bar.style.width = (progress + '%');
+    progress_bar.style.backgroundColor = "#00FF00"
+}
+
+progress();
+
+document.addEventListener('scroll', progress);
+
+
+// SIDENAV
 let ham_menu = document.querySelector("#ham-menu>span");
 let resume_btn = document.querySelectorAll(".resume");
 
@@ -164,12 +187,20 @@ function darkmode() {
     // skill cards
     let skill_cards = document.querySelectorAll(".skills-card");
     skill_cards.forEach(skill_card => {
-        skill_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        // box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        let skill_text = skill_card.querySelector(".skills-card-name")
+        skill_card.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
+        skill_card.style.backgroundColor = "#667C89";
+        skill_text.style.color = "#fff"
         skill_card.addEventListener("mouseover", () => {
             skill_card.style.boxShadow = "#fff 0px 3px 8px";
+            skill_card.style.backgroundColor = "#fff";
+            skill_text.style.color = "#667C89"
         })
         skill_card.addEventListener("mouseout", () => {
-            skill_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+            skill_card.style.backgroundColor = "#667C89";
+            skill_text.style.color = "#fff"
+            skill_card.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
         })
     });
 
@@ -182,6 +213,20 @@ function darkmode() {
         })
         tool_card.addEventListener("mouseout", () => {
             tool_card.style.boxShadow = "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset";
+        })
+        let skill_text = tool_card.querySelector(".tools-card-name")
+        tool_card.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
+        tool_card.style.backgroundColor = "#667C89";
+        skill_text.style.color = "#fff"
+        tool_card.addEventListener("mouseover", () => {
+            tool_card.style.boxShadow = "#fff 0px 3px 8px";
+            tool_card.style.backgroundColor = "#fff";
+            skill_text.style.color = "#667C89"
+        })
+        tool_card.addEventListener("mouseout", () => {
+            tool_card.style.backgroundColor = "#667C89";
+            skill_text.style.color = "#fff"
+            tool_card.style.boxShadow = "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px";
         })
     });
 
@@ -218,6 +263,12 @@ function darkmode() {
     let copyright = document.getElementById("copyright");
     copyright.style.backgroundColor = "#22272A";
     copyright.style.backgroundImage = "url(../assets/background/endless-constellation.svg)";
+
+    // // fixed social icons
+    // let github_fixed_icon = document.querySelector(".fixed-social-icons-github");
+    // github_fixed_icon.addEventListener("mouseover", () => {
+    //     github_fixed_icon.style.backgroundColor = "#ffffff";
+    // })
 }
 
 // fixed social icons

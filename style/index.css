@@ -1,5 +1,7 @@
 html {
        scroll-behavior: smooth;
+       -ms-overflow-style: none;  /* IE and Edge */
+       scrollbar-width: none;  /* Firefox */
 }
 
 body {
@@ -20,18 +22,45 @@ a {
 
 /* SCROLL BAR */
 ::-webkit-scrollbar {
+       /* width: 3px; */
+       display: none;
+}
+/* 
+::-webkit-scrollbar:hover {
        width: 7px;
 }
+
 ::-webkit-scrollbar-track {
        background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
        background: #667C89;
        border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
        background: #555;
+} */
+
+/* PROGRESS BAR */
+.progress {
+       position: fixed;
+       top: 80px;
+       left: 0;
+       width: 100%;
+       height: 2px;
+       background: white;
+       z-index: 1;
 }
+
+.progress .bar {
+       height: 100%;
+       width: 10%;
+       background: #00FF00;
+       transition: background 0.15s ease;
+}
+
 
 
 /* Navigation */
@@ -313,28 +342,33 @@ a {
        flex-direction: column;
        justify-content: center;
        align-items: center;
-       border: 1px solid black;
+       /* border: 1px solid black; */
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        border-radius: 10px;
        z-index: 2;
+       background-color: #667C89;
+       color: #ffffff;
 }
 
 .about-section-intro-img>p>img {
        width: 300px;
-       background-color: #667C89;
+       /* background-color: #667C89; */
        /* border-radius-t: 10px; */
        border-top-right-radius: 10px;
        border-top-left-radius: 10px;
 }
 
-.about-section-intro-img>p>img:hover {
-       background-color: #ebf1f5;
-       transition: 1s ease-in-out;
-}
-
 .about-section-intro-img>p>span {
        font-size: 20px;
-       color: gray;
+       /* color: #ffffff; */
 }
+
+.about-section-intro-img>p:hover {
+       color: #667C89;
+       background-color: #ebf1f5;
+       transition: 0.5s ease-in-out;
+}
+
 
 /* GITHUB STATS */
 .github-section {
@@ -759,22 +793,22 @@ a {
        color: #667C89;
 }
 
-.fixed-social-icon>:nth-child(1):hover{
+.fixed-social-icon>:nth-child(1):hover {
        color: #000000;
 }
 
-.fixed-social-icon>:nth-child(2):hover{
+.fixed-social-icon>:nth-child(2):hover {
        color: #0A66C2;
 }
 
-.fixed-social-icon>:nth-child(3):hover{
-       color: #00A884;
+.fixed-social-icon>:nth-child(3):hover {
+       color: #25D366;
 }
 
-.fixed-social-icon>:nth-child(4):hover{
+.fixed-social-icon>:nth-child(4):hover {
        color: #1A73E8;
 }
 
-.fixed-social-icon>:nth-child(5):hover{
+.fixed-social-icon>:nth-child(5):hover {
        color: #EA4335;
 }
