@@ -1,4 +1,8 @@
 @media (max-width: 825px) {
+    .window-loader>img {
+        width: 30%;
+    }
+
     nav {
         padding: 0 20px;
     }

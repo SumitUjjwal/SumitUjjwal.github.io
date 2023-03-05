@@ -1,31 +1,33 @@
 // const { application } = require("express");
 
 // // LOADER
-// window.addEventListener("load", () => {
-//     // let body = document.querySelector("body");
-//     // body.innerHTML = ""
-//     // body.innerHTML = `
-//     //     <div class="windown-loader">
-//     //         <img src="./assets/Infinity-loader-dark.gif" alt="">
-//     //     </div>
-//     //     `;
-//     let loader = document.getElementById("windown-loader");
-//     let progress = document.getElementById("progress");
-//     let navigation = document.getElementById("nav-menu");
-//     let main = document.querySelector("main");
-
-//     loader.style.display = "block";
-//     progress.style.display = "none";
-//     navigation.style.display = "none";
-//     main.style.display = "none";
-
-//     setTimeout(() => {
-//         loader.style.display = "none";
-//         progress.style.display = "block";
-//         navigation.style.display = "block";
-//         main.style.display = "block";
-//     }, 2000);
-// })
+let loader = document.getElementById("window-loader");
+let navigation = document.getElementById("nav-menu");
+let progress_bar = document.getElementById("progress");
+let main = document.querySelector("main");
+window.addEventListener("load", () => {
+    loader.style.opacity = "0";
+    loader.style.transition = "opacity 1.8s ease-in-out, -webkit-opacity 1.8s ease-in-out";
+    setTimeout(() => {
+        navigation.style.display = "flex";
+        setTimeout(() => {
+            navigation.style.opacity = "1";
+            navigation.style.transition = "opacity 3s ease-in-out, -webkit-opacity 3s ease-in-out";
+        }, 10);
+        main.style.display = "block";
+        setTimeout(() => {
+            main.style.opacity = "1";
+            main.style.transition = "opacity 3s ease-in-out, -webkit-opacity 3s ease-in-out";
+        }, 10);
+        progress_bar.style.display = "block";
+        setTimeout(() => {
+            progress_bar.style.opacity = "1";
+            progress_bar.style.transition = "opacity 3s ease-in-out, -webkit-opacity 3s ease-in-out";
+        }, 10);
+        loader.style.display = "none";
+        console.log("Page and all assets have finished loading.");
+    }, 1500);
+});
 
 // PROGRESS BAR
 function progress() {
@@ -181,6 +183,10 @@ function darkmode() {
     // navElem.forEach(element => {
     //     element.style.color = "#ffffff";
     // });
+
+    // loader
+    let loader_img = document.querySelector("#window-loader>img");
+    loader_img.setAttribute("src", "../assets/Infinity-loader-dark.gif");
 
     // ham icons
     let ham_icons = document.querySelectorAll("#ham-menu>span")
