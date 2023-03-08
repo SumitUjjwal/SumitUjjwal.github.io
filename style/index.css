@@ -1,7 +1,9 @@
 html {
        scroll-behavior: smooth;
-       -ms-overflow-style: none;  /* IE and Edge */
-       scrollbar-width: none;  /* Firefox */
+       -ms-overflow-style: none;
+       /* IE and Edge */
+       scrollbar-width: none;
+       /* Firefox */
 }
 
 body {
@@ -10,10 +12,9 @@ body {
        font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* *{
-       margin: 0%;
-       padding: 0%;
-} */
+* {
+       box-sizing: border-box;
+}
 
 a {
        text-decoration: none;
@@ -25,6 +26,7 @@ a {
        /* width: 3px; */
        display: none;
 }
+
 /* 
 ::-webkit-scrollbar:hover {
        width: 7px;
@@ -64,8 +66,8 @@ a {
 }
 
 /* WINDOW LOADER */
-.window-loader{
-       border: 1px solid ;
+.window-loader {
+       border: 1px solid;
        display: flex;
        justify-content: center;
        align-items: center;
@@ -79,12 +81,11 @@ a {
        z-index: 100;
 }
 
-.window-loader>img{
+.window-loader>img {
        width: 10%;
 }
 
 /* Navigation */
-
 nav {
        display: none;
        opacity: 0;
@@ -205,6 +206,9 @@ main {
 /* home */
 #home {
        /* border: 1px solid green; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
        padding: 80px 0 0 0;
        min-height: 100vh;
        background-color: #ebf1f5;
@@ -219,7 +223,7 @@ main {
        margin: auto;
        gap: 20px;
        width: 90%;
-       height: 100vh;
+       /* height: 100vh; */
 }
 
 #home>div>:nth-child(1) {
@@ -313,6 +317,24 @@ a {
 #home>div>:nth-child(2) {
        /* border: 1px solid blue; */
        width: 50%;
+}
+
+.container {
+       /* border: 1px solid red; */
+       align-items: center;
+       display: flex;
+       /* height: 100vh; */
+       justify-content: center;
+       width: 60%;
+}
+
+.shape {
+       background: #667C89;
+       border-radius: 7%;
+       height: 400px;
+       transition: all 1s ease-in-out;
+       width: 400px;
+       z-index: 2;
 }
 
 /* ABOUT */
