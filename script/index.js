@@ -31,19 +31,26 @@ window.addEventListener("load", () => {
 
 // PROGRESS BAR
 function progress() {
-    var windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    var docHeight = Math.max(
+    let windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+    let docHeight = Math.max(
         document.body.scrollHeight,
         document.body.offsetHeight,
         document.documentElement.clientHeight,
         document.documentElement.scrollHeight,
         document.documentElement.offsetHeight
     );
-    var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    var progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    let progress = (windowScrollTop / (docHeight - windowHeight)) * 100;
     const progress_bar = document.getElementById("progress");
     progress_bar.style.width = (progress + '%');
-    progress_bar.style.backgroundColor = "#00FF00"
+    progress_bar.style.backgroundColor = "#00FF00";
+    // console.log(progress);
+    if(progress > 11){
+        document.getElementById("nav-menu").style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+    }
+    else{
+        document.getElementById("nav-menu").style.boxShadow = null;
+    }
 }
 
 progress();
@@ -78,7 +85,7 @@ resume_btn.forEach((btn) => {
     })
 })
 
-GitHubCalendar(".calendar", "sumitujjwal", {
+GitHubCalendar(".calendar", "SumitUjjwal", {
     responsive: true,
     global_stats: true,
     tooltips: true,
@@ -194,6 +201,10 @@ function darkmode() {
         element.style.color = "#667C89";
     });
 
+    // nav
+    let nav = document.getElementById("nav-menu");
+    nav.style.backgroundImage = "url(../assets/background/endless-constellation.svg)";
+
     // section titles
     let section_titles = document.querySelectorAll(".section-title")
     section_titles.forEach(element => {
@@ -268,10 +279,12 @@ function darkmode() {
     project_cards.forEach(element => {
         element.style.backgroundColor = "#000000";
         element.addEventListener("mouseover", () => {
-            element.style.boxShadow = "#fff 0px 3px 8px";
+            // element.style.boxShadow = "#fff 0px 3px 8px";
+            element.style.border = "1px solid #667C89";
         })
         element.addEventListener("mouseout", () => {
             element.style.boxShadow = "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px";
+            element.style.border = null;
         })
     });
 
