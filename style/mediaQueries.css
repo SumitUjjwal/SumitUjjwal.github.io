@@ -587,6 +587,11 @@
         box-shadow: #667C89 0px 3px 8px;
         border-radius: 50%;
     }
+
+    /* FIXED SOCIAL ICON */
+    .fixed-social-icon {
+        position: absolute;
+    }
 }
 
 @media (max-width: 350px) {
