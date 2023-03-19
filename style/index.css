@@ -164,7 +164,7 @@ nav>:nth-child(2) button:active {
        display: none;
 }
 
-/* main */
+/* ---------------------------------MAIN----------------------------------- */
 
 main {
        /* margin-top: 50px; */
@@ -193,7 +193,7 @@ main {
        background-color: #667C89;
 }
 
-.tag {
+/* .tag {
        opacity: 0;
        transform: translate(0, -5vh);
        transition: ease-in-out 2s;
@@ -203,7 +203,7 @@ main {
        opacity: 1;
        transition: ease-in-out 2s;
        transform: translate(0, 0);
-}
+} */
 
 /* home */
 #home {
