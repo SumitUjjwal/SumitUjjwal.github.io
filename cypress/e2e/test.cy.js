@@ -1,5 +1,5 @@
 // import data from "../../submissionData.json"; // do not create this file
-const data = [{ submission_link: "https://SumitUjjwal.github.io/", id: 0 }];
+const data = [{ submission_link: "https://sumitujjwal.github.io", id: 0 }];
 
 describe("Test", function () {
   let acc_score = 0;
@@ -79,7 +79,7 @@ describe("Test", function () {
           acc_score += 1;
         });
 
-        // cy.visit(url);
+        cy.visit(url);
         cy.isInViewport("#nav-menu");
         cy.get(".nav-link.skills").click();
         cy.isScrolledTo("#skills");
@@ -87,7 +87,7 @@ describe("Test", function () {
           acc_score += 1;
         });
 
-        // cy.visit(url);
+        cy.visit(url);
         cy.isInViewport("#nav-menu");
         cy.get(".nav-link.projects").click();
         cy.isScrolledTo("#projects");
@@ -95,7 +95,7 @@ describe("Test", function () {
           acc_score += 1;
         });
 
-        // cy.visit(url);
+        cy.visit(url);
         cy.isInViewport("#nav-menu");
         cy.get(".nav-link.contact").click();
         cy.isScrolledTo("#contact");
