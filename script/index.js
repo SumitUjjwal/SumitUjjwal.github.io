@@ -79,11 +79,21 @@ function closeNav() {
     ham_menu.innerText = "menu";
 }
 
-resume_btn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        window.open("https://drive.google.com/file/d/1nFhA1j00JGnspzHS3UP5_AgFS2Icgm-j/view?usp=share_link");
-    })
-})
+// resume_btn.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//         // window.open("https://drive.google.com/file/d/1nFhA1j00JGnspzHS3UP5_AgFS2Icgm-j/view?usp=share_link");
+//         window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+//     })
+// })
+
+document.getElementById("resume-button-1").onclick = ()=>{
+    // location.href= "\\static\\pdf\\Altaf_Khan_Resume.pdf"
+    window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+}
+document.getElementById("resume-button-2").onclick = ()=>{
+    // location.href= "\\static\\pdf\\Altaf_Khan_Resume.pdf"
+    window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+}
 
 GitHubCalendar(".calendar", "SumitUjjwal", {
     responsive: true,
