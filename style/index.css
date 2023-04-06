@@ -53,14 +53,14 @@ a {
        left: 0;
        width: 100%;
        height: 2px;
-       background: white;
+       /* background: white; */
        z-index: 1;
        opacity: 0;
 }
 
 .progress .bar {
        height: 100%;
-       width: 10%;
+       width: 0%;
        background: #00FF00;
        transition: background 0.15s ease;
 }
