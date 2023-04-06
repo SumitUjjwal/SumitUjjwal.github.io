@@ -53,7 +53,7 @@ function progress() {
     }
 }
 
-progress();
+// progress();
 
 document.addEventListener('scroll', progress);
 
@@ -421,3 +421,8 @@ form.addEventListener("submit", async (event) => {
         alert(`Error in sending message! \n Please contact me through Linkedin!`);
     }
 })
+
+
+// skills section
+let skillsSection = document.querySelector("#skills>div");
+console.log(skillsSection);
