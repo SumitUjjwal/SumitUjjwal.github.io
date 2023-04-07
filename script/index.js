@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
         }, 10);
         loader.style.display = "none";
         console.log("Page and all assets have finished loading.");
-    }, 1000);
+    }, 500);
 });
 
 // PROGRESS BAR
