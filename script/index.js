@@ -204,8 +204,8 @@ function darkmode() {
     // });
 
     // loader
-    let loader_img = document.querySelector("#window-loader>img");
-    loader_img.setAttribute("src", "../assets/Infinity-loader-dark.gif");
+    // let loader_img = document.querySelector("#window-loader>img");
+    // loader_img.setAttribute("src", "../assets/Infinity-loader-dark.gif");
 
     // ham icons
     let ham_icons = document.querySelectorAll("#ham-menu>span")

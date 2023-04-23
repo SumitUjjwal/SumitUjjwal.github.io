@@ -11,6 +11,7 @@
        <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
        <link rel="stylesheet" href="./style/index.css">
        <link rel="stylesheet" href="./style/mediaQueries.css">
+       <link rel="stylesheet" href="./style/loader.css">
 
        <link rel="preconnect" href="https://fonts.googleapis.com" />
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -289,6 +290,56 @@
                             <hr>
                             <div class="box-container">
                                    <div class="project-card">
+                                          <div class="project-img" id="project-img"><img src="./assets/project_4.png"
+                                                        alt="" class="project-image static" id="static" /><img
+                                                        src="./assets/project_4.png" alt="" class="project-image active"
+                                                        id="active" /></div>
+                                          <div class="project-desc">
+                                                 <h2 class="project-title">LillyPut</h2>
+                                                 <!-- <hr> -->
+                                                 <p class="project-description">
+                                                        <span><strong>LillyPut</strong></span> is a web application that allows users to shorten URLs
+                                                        and provides an in-depth analysis of the number of clicks and
+                                                        locations of users who accessed the links.
+                                                 </p>
+
+                                                 <div class="project-features">
+                                                        <p><strong>Areas of Responsibility: </strong></p>
+                                                        <div>
+                                                               <p>• Developed the system to shorten the URL</p>
+                                                               <p>• Created the UI of the application</p>
+                                                               <p>• Implemented Google Open Authentication</p>
+                                                               <p>• Developed admin panel with CRUD operations</p>
+                                                        </div>
+                                                 </div>
+
+                                                 <p>
+                                                        <strong>Duration: </strong><span>A Collaborative project</span>
+                                                        built in
+                                                        a span of 5 days
+                                                 </p>
+
+                                                 <p class="project-tech-stack">
+                                                        <span><strong>Tech Stacks: </strong></span>
+                                                        NodeJS, ExpressJS, MongoDB, Mongoose, Redis, ChartJS, HTML, CSS
+                                                        and JavaScript
+                                                 </p>
+                                                 <div class="project-button">
+                                                        <a href="https://github.com/SumitUjjwal/project-url-shortener"
+                                                               target="blank">
+                                                               <button class="btn project-github-link">Code <i
+                                                                             class="fa-brands fa-github"></i></button>
+                                                        </a>
+                                                        <a href="https://lillyput.vercel.app/" target="blank">
+                                                               <button class="btn project-deployed-link">Live <i
+                                                                             class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
+                                                        </a>
+                                                 </div>
+                                          </div>
+
+                                   </div>
+                                   
+                                   <div class="project-card">
                                           <div class="project-img" id="project-img">
                                                  <img src="./assets/project_1.png" alt="" class="project-image static"
                                                         id="static" />
@@ -338,62 +389,12 @@
 
                                                  </p>
                                                  <div class="project-button">
-                                                        <a href="https://github.com/SumitUjjwal/utopian-cover-8281"
+                                                        <a href="https://github.com/SumitUjjwal/auto-zone-clone"
                                                                target="blank">
                                                                <button class="btn project-github-link">Code <i
                                                                              class="fa-brands fa-github"></i></button>
                                                         </a>
                                                         <a href="https://project-car-zone.netlify.app/" target="blank">
-                                                               <button class="btn project-deployed-link">Live <i
-                                                                             class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
-                                                        </a>
-                                                 </div>
-                                          </div>
-
-                                   </div>
-
-                                   <div class="project-card">
-                                          <div class="project-img" id="project-img"><img src="./assets/project_4.png"
-                                                        alt="" class="project-image static" id="static" /><img
-                                                        src="./assets/project_4.png" alt="" class="project-image active"
-                                                        id="active" /></div>
-                                          <div class="project-desc">
-                                                 <h2 class="project-title">LillyPut</h2>
-                                                 <!-- <hr> -->
-                                                 <p class="project-description">
-                                                        <span><strong>LillyPut</strong></span> is an URL shortener with
-                                                        analysis that not only shortens the URL but also allows
-                                                        clients to have full anlytical data like location,
-                                                        device, platform, etc.
-                                                 </p>
-
-                                                 <div class="project-features">
-                                                        <p><strong>Areas of Responsibility: </strong></p>
-                                                        <div>
-                                                               <p>• Search Functionality</p>
-                                                               <p>• User registration and log-in</p>
-                                                               <p>• Add to cart functionality</p>
-                                                        </div>
-                                                 </div>
-
-                                                 <p>
-                                                        <strong>Duration: </strong><span>A Collaborative project</span>
-                                                        built in
-                                                        a span of 5 days
-                                                 </p>
-
-                                                 <p class="project-tech-stack">
-                                                        <span><strong>Tech Stacks: </strong></span>
-                                                        NodeJS, ExpressJS, MongoDB, Mongoose, Redis, ChartJS, HTML, CSS
-                                                        and JavaScript
-                                                 </p>
-                                                 <div class="project-button">
-                                                        <a href="https://github.com/SumitUjjwal/cruel-team-7846"
-                                                               target="blank">
-                                                               <button class="btn project-github-link">Code <i
-                                                                             class="fa-brands fa-github"></i></button>
-                                                        </a>
-                                                        <a href="https://lillyput.vercel.app/" target="blank">
                                                                <button class="btn project-deployed-link">Live <i
                                                                              class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></button>
                                                         </a>
@@ -589,8 +590,11 @@
 
        <!-- WINDOW LOADER -->
        <div id="window-loader" class="window-loader">
-              <img src="./assets/Infinity-loader.gif" alt="">
+              <!-- <img src="./assets/Infinity-loader.gif" alt=""> -->
+              <span class="loader"></span>
+              <!-- <span class="loader">Load&nbsp;ng</span> -->
        </div>
+       <!-- <span id="window-loader" class="loader"></span> -->
 </body>
 <script src="./script/index.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
