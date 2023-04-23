@@ -156,6 +156,10 @@ nav>:nth-child(2) button:active {
        text-decoration: line-through;
 }
 
+#resume-link-1{
+       color: #667C89;
+}
+
 #ham-menu {
        display: none;
 }
@@ -301,8 +305,8 @@ main {
        font-size: 15px;
 }
 
-.contact-button>button:hover,
-#resume-button-2:hover {
+.contact-button>button:active,
+#resume-button-2:active {
        background-color: transparent;
        color: #667C89;
        border: 2px solid #667C89;
@@ -311,6 +315,7 @@ main {
 
 button,
 a {
+       color: #ffffff;
        cursor: pointer;
 }
 

@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Welcome");
+    res.send("Welcome to the Sumit Ujjwal - Portfolio");
 })
 
 app.post("/messages", async(req, res) => {
