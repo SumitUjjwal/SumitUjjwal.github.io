@@ -45,10 +45,10 @@ function progress() {
     progress_bar.style.width = (progress + '%');
     progress_bar.style.backgroundColor = "#00FF00";
     // console.log(progress);
-    if(progress > 11){
+    if (progress > 11) {
         document.getElementById("nav-menu").style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
     }
-    else{
+    else {
         document.getElementById("nav-menu").style.boxShadow = null;
     }
 }
@@ -87,7 +87,7 @@ function closeNav() {
 // })
 
 const downloadResume = () => {
-    window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+    window.open("../assets/Sumit_Ujjwal_Resume.pdf", '_blank');
 }
 
 // document.getElementById("resume-button-1").onclick = ()=>{
@@ -170,7 +170,7 @@ if (appearance == "dark") {
     toggle_img.alt = "bright";
     darkmode();
 } else {
-    toggle_img.src = "../assets/toggle/dark_image.png";
+    toggle_img.src = "../assets/toggle/moon.png";
     toggle_img.alt = "dark";
 }
 
@@ -188,6 +188,22 @@ toggle.addEventListener("click", () => {
     }
     console.log("toggle");
 })
+
+// toggle effect
+var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
+var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
+var toggleEffect = document.querySelector('.toggle-effect');
+
+toggleEffect.addEventListener('mousedown', function () {
+    audio2.load();
+    audio2.play();
+});
+
+toggleEffect.addEventListener('mouseup', function () {
+    audio.load();
+    audio.play();
+});
+
 
 function darkmode() {
     // backgrounds
