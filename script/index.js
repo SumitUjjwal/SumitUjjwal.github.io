@@ -7,7 +7,7 @@ let progress_bar = document.getElementById("progress");
 let main = document.querySelector("main");
 window.addEventListener("load", () => {
     loader.style.opacity = "0";
-    loader.style.transition = "opacity 1.8s ease-in-out, -webkit-opacity 1.8s ease-in-out";
+    loader.style.transition = "opacity 2s ease-in-out, -webkit-opacity 2s ease-in-out";
     setTimeout(() => {
         navigation.style.display = "flex";
         setTimeout(() => {
@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
         }, 10);
         loader.style.display = "none";
         console.log("Page and all assets have finished loading.");
-    }, 500);
+    }, 2000);
 });
 
 // PROGRESS BAR
