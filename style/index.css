@@ -10,6 +10,7 @@ body {
        margin: 0;
        padding: 0;
        font-family: 'Source Sans Pro', sans-serif;
+       /* font-family: 'Oswald', sans-serif; */
 }
 
 * {
@@ -131,6 +132,7 @@ nav>:nth-child(2) {
        width: 50%;
        display: flex;
        justify-content: space-between;
+       align-items: center;
        text-align: center;
        font-size: 20px;
        /* border: 1px solid blue; */
@@ -158,6 +160,20 @@ nav>:nth-child(2) button:active {
 
 #resume-link-1{
        color: #667C89;
+}
+
+/* TOGGLE */
+/* .appearance-toggle {
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+} */
+
+.appearance-toggle>img {
+       width: 30px;
+       /* padding: 20%; */
+       /* box-shadow: #667C89 0px 3px 8px; */
+       /* border-radius: 50%; */
 }
 
 #ham-menu {
@@ -829,19 +845,7 @@ text.ContributionCalendar-label{
        text-decoration: underline;
 }
 
-/* TOGGLE */
-.appearance-toggle {
-       position: fixed;
-       bottom: 20px;
-       right: 20px;
-}
 
-.appearance-toggle>img {
-       width: 50px;
-       padding: 20%;
-       box-shadow: #667C89 0px 3px 8px;
-       border-radius: 50%;
-}
 
 /* FIXED SOCIAL ICON */
 .fixed-social-icon {
