@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
             progress_bar.style.transition = "opacity 3s ease-in-out, -webkit-opacity 3s ease-in-out";
         }, 10);
         loader.style.display = "none";
-        console.log("Page and all assets have finished loading.");
+        // console.log("Page and all assets have finished loading.");
     }, 2000);
 });
 
@@ -82,19 +82,19 @@ function closeNav() {
 // resume_btn.forEach((btn) => {
 //     btn.addEventListener("click", () => {
 //         // window.open("https://drive.google.com/file/d/1nFhA1j00JGnspzHS3UP5_AgFS2Icgm-j/view?usp=share_link");
-//         window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+//         window.open("../assets/Sumit-Ujjwal-Resume.pdf",'_blank');
 //     })
 // })
 
 const downloadResume = () => {
-    window.open("../assets/Sumit_Ujjwal_Resume.pdf", '_blank');
+    window.open("../assets/Sumit-Ujjwal-Resume.pdf", '_blank');
 }
 
 // document.getElementById("resume-button-1").onclick = ()=>{
-//     window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+//     window.open("../assets/Sumit-Ujjwal-Resume.pdf",'_blank');
 // }
 // document.getElementById("resume-button-2").onclick = ()=>{
-//     window.open("../assets/Sumit_Ujjwal_Resume.pdf",'_blank');
+//     window.open("../assets/Sumit-Ujjwal-Resume.pdf",'_blank');
 // }
 
 GitHubCalendar(".calendar", "SumitUjjwal", {
@@ -440,5 +440,5 @@ form.addEventListener("submit", async (event) => {
 
 
 // skills section
-let skillsSection = document.querySelector("#skills>div");
-console.log(skillsSection);
+// let skillsSection = document.querySelector("#skills>div");
+// console.log(skillsSection);
