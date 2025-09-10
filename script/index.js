@@ -353,8 +353,8 @@ window.addEventListener("resize", () => {
         social_icons_box.innerHTML = `
             <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-lg"></i></a>
             <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-lg"></i></a>
-            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-lg"></i></a>
+            <a target="_blank" href="https://wa.me/0123456789?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-lg"></i></a>
+            <a target="_blank" href="tel:0123456789"><i class="fa-solid fa-square-phone fa-lg"></i></a>
             <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-lg"></i></a>
         `;
         social_icons_box.style.gap = "20px";
@@ -363,8 +363,8 @@ window.addEventListener("resize", () => {
         social_icons_box.innerHTML = `
             <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-2xl"></i></a>
             <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
-            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
+            <a target="_blank" href="https://wa.me/0123456789?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+            <a target="_blank" href="tel:0123456789"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
             <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-2xl"></i></a>
         `;
         social_icons_box.style.gap = "50px";
@@ -378,8 +378,8 @@ if (width < 700) {
     social_icons_box.innerHTML = `
             <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-xl"></i></a>
             <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-xl"></i></a>
-            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-xl"></i></a>
+            <a target="_blank" href="https://wa.me/0123456789?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-xl"></i></a>
+            <a target="_blank" href="tel:0123456789"><i class="fa-solid fa-square-phone fa-xl"></i></a>
             <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-xl"></i></a>
         `;
     social_icons_box.style.gap = "20px";
@@ -388,8 +388,8 @@ if (width < 700) {
     social_icons_box.innerHTML = `
             <a target="_blank" href="https://github.com/SumitUjjwal"><i class="fa-brands fa-square-github fa-2xl"></i></a>
             <a target="_blank" href="https://www.linkedin.com/in/sumitujjwal/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-            <a target="_blank" href="https://wa.me/917070580782?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
-            <a target="_blank" href="tel:+918789223801"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
+            <a target="_blank" href="https://wa.me/0123456789?text=Hello%20Sumit"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></a>
+            <a target="_blank" href="tel:0123456789"><i class="fa-solid fa-square-phone fa-2xl"></i></a>
             <a target="_blank" href="mailto:sumitujjwal.work@gmail.com"><i class="fa-sharp fa-solid fa-square-envelope fa-2xl"></i></a>
         `;
     social_icons_box.style.gap = "50px";
