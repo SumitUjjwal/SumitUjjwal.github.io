@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-obs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131a"/>
+      <stop offset="100%" stop-color="#181a24"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg-obs)" rx="8"/>
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#f85149" stroke-opacity="0.15" rx="7"/>
+  <!-- Title Badge -->
+  <rect x="30" y="24" width="180" height="22" rx="4" fill="#f85149" fill-opacity="0.12" stroke="#f85149" stroke-opacity="0.3"/>
+  <text x="120" y="39" fill="#ff7b72" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">INCIDENT INVESTIGATION</text>
+  <!-- 3 Observation Columns -->
+  <!-- Col 1: Signals -->
+  <g transform="translate(30, 65)">
+    <rect x="0" y="0" width="170" height="155" rx="6" fill="#191e28" stroke="#388bfd" stroke-width="1"/>
+    <rect x="12" y="12" width="100" height="20" rx="3" fill="#388bfd" fill-opacity="0.15"/>
+    <text x="62" y="26" fill="#58a6ff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" text-anchor="middle">1. SIGNALS</text>
+    <text x="15" y="58" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">ALB 502 Bad Gateway</text>
+    <text x="15" y="78" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">ELB access logs trace</text>
+    <text x="15" y="105" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Target Group Drop</text>
+    <text x="15" y="125" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">Unhealthy instance state</text>
+    <text x="15" y="148" fill="#ff7b72" font-family="'JetBrains Mono', monospace" font-size="9">CloudWatch Alarm Raised</text>
+  </g>
+  <!-- Col 2: Investigation -->
+  <g transform="translate(215, 65)">
+    <rect x="0" y="0" width="170" height="155" rx="6" fill="#1e1c25" stroke="#ff9933" stroke-width="1"/>
+    <rect x="12" y="12" width="115" height="20" rx="3" fill="#ff9933" fill-opacity="0.15"/>
+    <text x="70" y="26" fill="#ff9933" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" text-anchor="middle">2. INVESTIGATION</text>
+    <text x="15" y="58" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Structured Logs</text>
+    <text x="15" y="78" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">JSON Log Insights query</text>
+    <text x="15" y="105" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">EC2 &amp; Nginx Logs</text>
+    <text x="15" y="125" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">Connection pool limits</text>
+    <text x="15" y="148" fill="#ff9933" font-family="'JetBrains Mono', monospace" font-size="9">Root cause isolated</text>
+  </g>
+  <!-- Col 3: Resolution & Prevention -->
+  <g transform="translate(400, 65)">
+    <rect x="0" y="0" width="170" height="155" rx="6" fill="#17231d" stroke="#3fb950" stroke-width="1"/>
+    <rect x="12" y="12" width="115" height="20" rx="3" fill="#3fb950" fill-opacity="0.15"/>
+    <text x="70" y="26" fill="#7ee787" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" text-anchor="middle">3. PREVENTION</text>
+    <text x="15" y="58" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Tuned Health Checks</text>
+    <text x="15" y="78" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">Grace period &amp; limits</text>
+    <text x="15" y="105" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Operational Runbook</text>
+    <text x="15" y="125" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">Documented runbooks</text>
+    <text x="15" y="148" fill="#7ee787" font-family="'JetBrains Mono', monospace" font-size="9">Zero recurring 502s</text>
+  </g>
+  <!-- Bottom Observability Tooling -->
+  <rect x="30" y="240" width="540" height="70" rx="6" fill="#111620" stroke="#30363d" stroke-width="1"/>
+  <text x="48" y="264" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">OBSERVABILITY TOOLING STACK</text>
+  <text x="48" y="288" fill="#e6edf3" font-family="'JetBrains Mono', monospace" font-size="10.5">AWS CloudWatch Logs ● Metric Filters ● CloudWatch Alarms ● SNS Alerts ● Runbooks</text>
+</svg>
