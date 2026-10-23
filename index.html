@@ -1,487 +1,1145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Ujjwal - Software Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Source Code Pro', monospace;
-            background-color: #0c0c0c;
-            color: #d1d5db;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sumit Ujjwal | Senior Backend Developer</title>
+  <meta name="description" content="Sumit Ujjwal is a Senior Backend Developer specializing in .NET C#, Python, MySQL, Redis, and AWS. Building reliable APIs, optimized databases, and production-ready cloud systems.">
+  <meta name="author" content="Sumit Ujjwal">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sumitujjwal.github.io/">
 
-        /* Canvas for Digital Rain */
-        #digital-rain-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -2;
-            background-color: #0c0c0c;
-        }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sumitujjwal.github.io/">
+  <meta property="og:title" content="Sumit Ujjwal | Senior Backend Developer">
+  <meta property="og:description" content="Building reliable backend systems, optimizing databases, and keeping production software running.">
+  <meta property="og:image" content="https://sumitujjwal.github.io/assets/profile-pic-4.png">
 
-        /* Cursor-following Glow Effect on the background */
-        .background-glow {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 153, 51, 0.08) 0%, transparent 40%);
-        }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://sumitujjwal.github.io/">
+  <meta name="twitter:title" content="Sumit Ujjwal | Senior Backend Developer">
+  <meta name="twitter:description" content="Building reliable backend systems, optimizing databases, and keeping production software running.">
+  <meta name="twitter:image" content="https://sumitujjwal.github.io/assets/profile-pic-4.png">
 
-        /* Card Styling with a new cursor-following glow */
-        .card {
-            background-color: #1a1a1a;
-            border: 1px solid #2d3748;
-            transition: all 0.5s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            /* Ensure cards are above the main background glow */
-        }
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-        /* New foreground glow effect on cards */
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at var(--card-x, 50%) var(--card-y, 50%), rgba(255, 153, 51, 0.15) 0%, transparent 200px);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            pointer-events: none;
-        }
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-        .card:hover::before {
-            opacity: 1;
-        }
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style/portfolio.css">
 
-        /* Command Prompt Styling */
-        .prompt::before {
-            content: '$ ';
-            color: #ff9933;
-        }
-
-        .input-cursor {
-            animation: blink-caret 1s step-end infinite;
-            display: inline-block;
-            width: 8px;
-            height: 1.25em;
-            background-color: #ff9933;
-            vertical-align: middle;
-            margin-left: 4px;
-        }
-
-        @keyframes blink-caret {
-
-            from,
-            to {
-                background-color: transparent;
-            }
-
-            50% {
-                background-color: #ff9933;
-            }
-        }
-
-        .unique-link {
-            transition: all 0.3s ease;
-        }
-
-        .unique-link:hover {
-            color: #ff9933;
-            text-shadow: 0 0 5px #ff9933;
-        }
-
-        /* Rule to control opacity of foreground elements based on JS */
-        .fade-on-idle {
-            opacity: 0.05;
-            transform: scale(0.99);
-            transition: opacity 5s ease, transform 5s ease;
-        }
-    </style>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sumit Ujjwal",
+    "jobTitle": "Senior Backend Developer",
+    "url": "https://sumitujjwal.github.io/",
+    "sameAs": [
+      "https://github.com/SumitUjjwal",
+      "https://www.linkedin.com/in/sumitujjwal"
+    ],
+    "knowsAbout": [
+      ".NET",
+      "C#",
+      "ASP.NET Core",
+      "Python",
+      "MySQL",
+      "Redis",
+      "Amazon Web Services",
+      "Database Optimization",
+      "REST APIs",
+      "CI/CD"
+    ]
+  }
+  </script>
 </head>
+<body>
 
-<body class="antialiased">
+<!-- Skip Link for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Digital Rain Canvas -->
-    <canvas id="digital-rain-canvas"></canvas>
+<!-- Futuristic Interactive Distributed Mesh Background -->
+<div class="cyber-network-bg" aria-hidden="true">
+  <canvas id="cyber-network-canvas"></canvas>
+  <div class="cyber-network-vignette"></div>
+</div>
 
-    <!-- Cursor-following Glow Effect -->
-    <div class="background-glow"></div>
+<!-- NAVIGATION -->
+<header id="nav-menu" role="banner">
+  <nav class="nav-container" aria-label="Primary navigation">
+    <a href="#home" class="nav-logo" aria-label="Sumit Ujjwal portfolio home">
+      <span class="nav-logo-initials">SU</span>
+      <span class="nav-logo-text">Sumit Ujjwal</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#home" class="nav-link home">Home</a></li>
+      <li><a href="#about" class="nav-link about">About</a></li>
+      <li><a href="#experience" class="nav-link experience">Experience</a></li>
+      <li><a href="#projects" class="nav-link projects">Engineering Work</a></li>
+      <li><a href="#skills" class="nav-link skills">Tech Stack</a></li>
+      <li><a href="#contact" class="nav-link contact">Contact</a></li>
+    </ul>
+    <div id="resume-button-1" class="nav-resume">
+      <a id="resume-link-1" href="assets/Sumit-Ujjwal-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Sumit-Ujjwal-Resume.pdf" class="nav-link resume btn-resume" aria-label="Download resume PDF">Resume</a>
+    </div>
+    <button id="ham-menu" class="ham-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+      <span class="ham-bar"></span>
+    </button>
+  </nav>
 
-    <!-- Header Section -->
-    <header class="card bg-[#1a1a1a] text-white shadow-lg sticky top-0 z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-100 unique-link">
-                /root<span class="text-xs text-gray-500">_developer</span>
-            </a>
-            <div class="hidden md:flex space-x-8 text-sm">
-                <a href="#about" class="unique-link">/home/about</a>
-                <a href="#experience" class="unique-link">/var/www/experience</a>
-                <a href="#certificates" class="unique-link">/usr/config/certs</a>
-                <a href="#skills" class="unique-link">/usr/config/skills</a>
-                <a href="#contact" class="unique-link">/dev/contact</a>
+  <!-- Responsive Mobile Menu -->
+  <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#home" class="mob-link home" onclick="closeMobileNav()">Home</a></li>
+      <li><a href="#about" class="mob-link about" onclick="closeMobileNav()">About</a></li>
+      <li><a href="#experience" class="mob-link experience" onclick="closeMobileNav()">Experience</a></li>
+      <li><a href="#projects" class="mob-link projects" onclick="closeMobileNav()">Engineering Work</a></li>
+      <li><a href="#skills" class="mob-link skills" onclick="closeMobileNav()">Tech Stack</a></li>
+      <li><a href="#contact" class="mob-link contact" onclick="closeMobileNav()">Contact</a></li>
+      <li><a href="assets/Sumit-Ujjwal-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Sumit-Ujjwal-Resume.pdf" class="mob-link resume" onclick="closeMobileNav()">Download Resume</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- HERO SECTION -->
+  <section id="home" class="section-hero" aria-label="Introduction">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          <span>Senior Backend Developer &bull; Distributed Systems &amp; Cloud</span>
+        </div>
+        <p id="user-detail-name" class="hero-name">Hi, I am <span>Sumit Ujjwal</span></p>
+        <h1 class="hero-title">Senior Backend Developer</h1>
+        <p class="hero-intro">
+          Building reliable backend systems, optimising MySQL databases, and keeping production software running on AWS.
+          Specialised in <strong>.NET C#</strong>, <strong>Python</strong>, <strong>SQL performance</strong>, and <strong>REST APIs</strong> with a focus on maintainable Clean Architecture and high operational reliability.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View Engineering Work</a>
+          <div id="resume-button-2">
+            <a id="resume-link-2" href="assets/Sumit-Ujjwal-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Sumit-Ujjwal-Resume.pdf" class="btn-secondary">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="hero-social">
+          <a href="https://github.com/SumitUjjwal" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sumitujjwal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="mailto:sumitonboard@gmail.com" aria-label="Email Sumit Ujjwal" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>sumitonboard@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <!-- Redesigned Futuristic Production Systems Console -->
+        <div class="hero-specs-console" aria-label="Production Systems and Architecture Console">
+          <!-- Top Cyber Header -->
+          <div class="console-header">
+            <div class="console-title-group">
+              <span class="console-live-beacon" aria-hidden="true">
+                <span class="beacon-core"></span>
+                <span class="beacon-ring"></span>
+              </span>
+              <div>
+                <p class="console-main-title">PRODUCTION SYSTEMS ARCHITECTURE</p>
+                <p class="console-sub-title">Distributed Backend Systems &bull; AWS Ecosystem</p>
+              </div>
             </div>
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-400 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
+            <div class="console-env-tag">
+              <span class="env-code">AWS US-EAST-1</span>
+              <span class="env-status">HEALTHY</span>
+            </div>
+          </div>
+
+          <!-- Futuristic Mini Flow Topology -->
+          <div class="console-topology" aria-hidden="true">
+            <div class="topo-node topo-gateway">
+              <span class="node-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </span>
+              <span class="node-name">ALB &bull; WAF</span>
+              <span class="node-stat">SSL Ingress</span>
+            </div>
+
+            <div class="topo-connector">
+              <span class="connector-line"></span>
+              <span class="connector-pulse"></span>
+            </div>
+
+            <div class="topo-node topo-core">
+              <span class="node-icon">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              </span>
+              <span class="node-name">.NET CQRS</span>
+              <span class="node-stat">9 Services</span>
+            </div>
+
+            <div class="topo-connector">
+              <span class="connector-line"></span>
+              <span class="connector-pulse pulse-delay"></span>
+            </div>
+
+            <div class="topo-cluster">
+              <div class="topo-mini-node">
+                <span class="mini-dot redis-dot"></span>
+                <span class="mini-label">Redis Cache</span>
+              </div>
+              <div class="topo-mini-node">
+                <span class="mini-dot mysql-dot"></span>
+                <span class="mini-label">MySQL RDS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Engineering Telemetry KPI Strip -->
+          <div class="console-kpi-grid">
+            <div class="kpi-card">
+              <span class="kpi-value">&lt; 15ms</span>
+              <span class="kpi-label">p99 Latency</span>
+            </div>
+            <div class="kpi-card">
+              <span class="kpi-value">99.98%</span>
+              <span class="kpi-label">Production SLA</span>
+            </div>
+            <div class="kpi-card">
+              <span class="kpi-value">9 Services</span>
+              <span class="kpi-label">Microservices</span>
+            </div>
+          </div>
+
+          <!-- Production Architectural Specs Breakdown -->
+          <div class="console-specs-body">
+            <div class="console-spec-row">
+              <div class="spec-label-col">
+                <span class="spec-accent-bar"></span>
+                <span class="spec-heading">CORE RUNTIME</span>
+              </div>
+              <div class="spec-data-col">
+                <span class="spec-primary">.NET C# &bull; ASP.NET Core &bull; Python</span>
+                <span class="spec-tag">CQRS MediatR</span>
+              </div>
+            </div>
+
+            <div class="console-spec-row">
+              <div class="spec-label-col">
+                <span class="spec-accent-bar db-bar"></span>
+                <span class="spec-heading">DATA &amp; CACHE</span>
+              </div>
+              <div class="spec-data-col">
+                <span class="spec-primary">MySQL 8.0 RDS &bull; Redis &bull; Liquibase</span>
+                <span class="spec-tag">Index Optimized</span>
+              </div>
+            </div>
+
+            <div class="console-spec-row">
+              <div class="spec-label-col">
+                <span class="spec-accent-bar aws-bar"></span>
+                <span class="spec-heading">CLOUD &amp; DEVOPS</span>
+              </div>
+              <div class="spec-data-col">
+                <span class="spec-primary">AWS EC2 &bull; ALB &bull; ASG &bull; Nginx &bull; Linux</span>
+                <span class="spec-tag">Zero-Downtime</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Console Footer: Verified Tech Stack Badges -->
+          <div class="console-footer">
+            <div class="console-pills">
+              <span class="console-pill">.NET C#</span>
+              <span class="console-pill">MySQL</span>
+              <span class="console-pill">Redis</span>
+              <span class="console-pill">AWS</span>
+              <span class="console-pill">Clean Architecture</span>
+              <span class="console-pill">REST APIs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about section" aria-label="About Sumit Ujjwal">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">About</span>
+        <h2 class="section-title">Engineering Focus &amp; Architecture</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p id="user-detail-intro" class="about-lead">
+            I'm a Senior Backend Developer at BigYellowFish Technologies, working on the backend systems that power the BigYellow platform. My work involves building APIs, working with databases<span class="sr-only"> (SQL)</span>, integrating services, and making sure things continue to work as expected in production.
+          </p>
+          <p>
+            I enjoy the problem-solving side of backend engineering &mdash; understanding why something isn't working, figuring out where things can be improved, and finding practical solutions without making systems unnecessarily complicated. Whether it's debugging an issue, improving a slow query, or working on a new feature, I like understanding the problem before jumping into a solution.
+          </p>
+          <p>
+            Over time, I've come to appreciate that good backend engineering is about more than writing code. It's about making thoughtful decisions, keeping systems maintainable, and considering what happens after a feature goes live. That's the approach I try to bring to my work every day.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <div>
+              <h3>Backend Architecture</h3>
+              <p>.NET C#, ASP.NET Core, Python, Clean Architecture, CQRS with MediatR, and Result-pattern error handling.</p>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div>
+              <h3>Database Engineering</h3>
+              <p>MySQL, execution plan analysis, B-Tree composite indexing, Liquibase migrations, and Redis caching.</p>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <div>
+              <h3>AWS Cloud Infrastructure</h3>
+              <p>EC2, RDS for MySQL, ALB, Auto Scaling Groups, S3, CodePipeline, CodeDeploy, and Systems Manager.</p>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-card-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div>
+              <h3>Production Operations</h3>
+              <p>Linux administration, Nginx reverse proxies, CloudWatch metric filters &amp; alarms, and incident investigation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section-alt" aria-label="Professional experience">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Experience</span>
+        <h2 class="section-title">Professional Timeline</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Position 1: Senior Backend Developer (Current Role) -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot current"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Senior Backend Developer</h3>
+                <p class="timeline-company">BigYellowFish Technologies Pvt. Ltd.</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Oct 2026 &ndash; Present</span>
+                <span class="timeline-badge">Current Role</span>
+              </div>
+            </div>
+            <p class="timeline-summary">
+              Promoted to Senior Backend Developer in October 2026. Leading backend engineering efforts focused on system reliability, production incident troubleshooting, MySQL/RDS database performance and upgrades, cloud infrastructure maintainability, and deployment automation across the BigYellow platform microservices.
+            </p>
+
+            <div class="timeline-responsibilities">
+              <div class="resp-group">
+                <h4>API &amp; Application Development</h4>
+                <ul>
+                  <li>Direct backend service maintainability and engineering decisions across .NET Core and Python microservices, emphasizing Clean Architecture and CQRS patterns.</li>
+                  <li>Drive design of resilient API contracts, distributed transaction safety, and Redis caching strategies to safeguard high-concurrency throughput.</li>
+                  <li>Review engineering pull requests for architectural soundness, thread safety, Result-pattern error handling, and performance standards.</li>
+                </ul>
+              </div>
+
+              <div class="resp-group">
+                <h4>Database Engineering</h4>
+                <ul>
+                  <li>Plan and execute MySQL / Amazon RDS engine version upgrades and parameter group tuning with zero unplanned service disruption.</li>
+                  <li>Lead advanced database performance diagnostics, connection pool capacity planning, and mitigation of query contention under heavy enterprise traffic.</li>
+                  <li>Enforce structured Liquibase schema migration workflows, multi-tenant safety standards, and robust rollback strategies.</li>
+                </ul>
+              </div>
+
+              <div class="resp-group">
+                <h4>AWS Infrastructure &amp; Production Operations</h4>
+                <ul>
+                  <li>Configure and optimize Auto Scaling Group lifecycle hooks, automated target tracking policies, and Application Load Balancer health checks.</li>
+                  <li>Refine CI/CD pipeline automation across AWS CodePipeline and CodeDeploy for deployment consistency, automated rollbacks, and fast recovery.</li>
+                  <li>Lead production incident investigations, root-cause analyses (RCA), and implement preventive operational improvements across Linux and CloudWatch alarms.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-tech">
+              <span class="tech-tag">C# / .NET</span>
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">Clean Architecture</span>
+              <span class="tech-tag">MySQL / RDS Upgrades</span>
+              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">AWS Auto Scaling</span>
+              <span class="tech-tag">CI/CD Automation</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">CloudWatch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Position 2: Backend Developer -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Backend Developer</h3>
+                <p class="timeline-company">BigYellowFish Technologies Pvt. Ltd.</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">Sep 2023 &ndash; Sep 2026</span>
+              </div>
+            </div>
+            <p class="timeline-summary">
+              Built and maintained core backend APIs, database solutions, scheduled background jobs, and cloud integrations for the BigYellow enterprise platform. Developed modular features across user management, engagement mechanics, analytics, and wearable integrations while ensuring system uptime and operational health.
+            </p>
+
+            <div class="timeline-responsibilities">
+              <div class="resp-group">
+                <h4>API &amp; Application Development</h4>
+                <ul>
+                  <li>Built and maintained REST APIs using <strong>C#</strong>, <strong>.NET</strong>, <strong>ASP.NET Core</strong>, <strong>Entity Framework Core</strong>, and <strong>LINQ</strong> following maintainable architecture principles.</li>
+                  <li>Developed <strong>Python</strong> services and automation tools, integrated external third-party APIs and wearable platforms, and implemented core backend business logic.</li>
+                  <li>Implemented <strong>Quartz.NET</strong> scheduled background jobs, asynchronous processing pipelines, notification workflows, and <strong>Firebase Admin SDK</strong> integrations.</li>
+                  <li>Contributed feature development across user management, analytics, management broadcasts, nudge notifications, wearable integrations, Action Management, XP levels, leaderboards, and point-based features.</li>
+                </ul>
+              </div>
+
+              <div class="resp-group">
+                <h4>Database Engineering</h4>
+                <ul>
+                  <li>Designed and managed <strong>MySQL</strong> schemas, wrote optimized SQL queries, and authored index strategies for multi-tenant enterprise datasets.</li>
+                  <li>Conducted query execution plan analyses (<code>EXPLAIN</code>) to troubleshoot and eliminate slow query bottlenecks.</li>
+                  <li>Executed database migrations and schema changes across development, staging, and production using <strong>Liquibase</strong>.</li>
+                  <li>Managed connection pooling, monitored RDS storage capacity growth, and resolved concurrency and connectivity issues under high workload.</li>
+                </ul>
+              </div>
+
+              <div class="resp-group">
+                <h4>AWS Infrastructure &amp; Production Operations</h4>
+                <ul>
+                  <li>Managed AWS cloud resources including <strong>EC2</strong>, <strong>RDS</strong>, <strong>S3</strong>, <strong>CloudWatch</strong>, <strong>Application Load Balancers</strong>, <strong>Auto Scaling Groups</strong>, and <strong>AWS WAF</strong>.</li>
+                  <li>Built and maintained automated CI/CD deployment pipelines utilizing <strong>AWS CodeBuild</strong>, <strong>CodePipeline</strong>, and <strong>CodeDeploy</strong>.</li>
+                  <li>Configured <strong>Nginx</strong> reverse proxies, administered Ubuntu Linux environments, and maintained SSL/TLS certificate renewals.</li>
+                  <li>Investigated production operations, API connectivity drops, memory utilization spikes, deployment failures, and application availability using CloudWatch metrics and alarms.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-tech">
+              <span class="tech-tag">C# / .NET</span>
+              <span class="tech-tag">ASP.NET Core</span>
+              <span class="tech-tag">EF Core / LINQ</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Quartz.NET</span>
+              <span class="tech-tag">AWS EC2 / RDS</span>
+              <span class="tech-tag">CodePipeline</span>
+              <span class="tech-tag">CodeDeploy</span>
+              <span class="tech-tag">Nginx</span>
+              <span class="tech-tag">Linux</span>
+              <span class="tech-tag">CloudWatch</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Intensive Foundation -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Intensive Systems &amp; Software Engineering</h3>
+                <p class="timeline-company">Masai School &amp; Independent Development</p>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-period">2022 &ndash; 2023</span>
+              </div>
+            </div>
+            <p class="timeline-summary">
+              Completed comprehensive full-stack and backend training program at Masai School. Built production-structured web services, solved 300+ data structures and algorithms problems, and earned Google Cloud certifications covering IAM, Compute Engine, and Cloud Functions.
+            </p>
+            <div class="timeline-tech">
+              <span class="tech-tag">.NET C#</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Google Cloud</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING WORK / PROJECTS SECTION -->
+  <section id="projects" class="section-projects" aria-label="Selected engineering work">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Engineering Work</span>
+        <h2 class="section-title">Production Case Studies</h2>
+        <p class="section-subtitle">
+          Sanitized case studies drawn from real-world backend and cloud infrastructure work. Outlining engineering problems, architectural solutions, and verified outcomes without exposing confidential business logic or private credentials.
+        </p>
+      </div>
+
+      <!-- Case Study 1: Deployment Reliability -->
+      <article class="project-card" aria-label="AWS Deployment Reliability and ASG Lifecycle">
+        <div class="project-img">
+          <img src="assets/case-study-asg.svg" alt="AWS Auto Scaling and CodeDeploy lifecycle architecture diagram" width="280" height="160" loading="lazy">
+        </div>
+        <div class="project-desc">
+          <span class="project-category">AWS Infrastructure &bull; CI/CD</span>
+          <h3 class="project-title">Deployment Reliability and Auto Scaling Lifecycle</h3>
+          <p class="project-description">
+            Production deployments depend on coordination between deployment automation, instance initialization, and load balancer health checks. Diagnosed Auto Scaling Group instance launches, reviewed lifecycle hooks and deployment sequencing, and verified that newly launched replacement instances receive the expected application version and pass health checks before serving production traffic.
+          </p>
+          <div class="project-tech-stack">
+            <span>AWS EC2</span>
+            <span>Auto Scaling Groups</span>
+            <span>AWS CodeDeploy</span>
+            <span>Application Load Balancer</span>
+            <span>CloudWatch</span>
+          </div>
+          <div class="project-button">
+            <button type="button" class="btn-card project-deployed-link open-case-modal-btn" data-case-id="asg-lifecycle">
+              <span>View Case Details</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
             </button>
-        </nav>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a] px-2 pt-2 pb-3 space-y-1 sm:px-3 text-sm">
-            <a href="#about"
-                class="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700">/home/about</a>
-            <a href="#experience"
-                class="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700">/var/www/experience</a>
-            <a href="#certificates"
-                class="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700">/etc/config/certs</a>
-            <a href="#skills"
-                class="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700">/usr/bin/skills</a>
-            <a href="#contact"
-                class="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700">/dev/contact</a>
+            <a href="https://github.com/SumitUjjwal" class="project-github-link sr-only" aria-hidden="true" tabindex="-1">GitHub Profile</a>
+          </div>
         </div>
-    </header>
+      </article>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
-        <!-- About Section -->
-        <section id="about" class="py-16">
-            <h2 class="text-3xl font-bold mb-4 unique-link">about.sh</h2>
-            <div class="p-8 rounded-xl bg-[#121212] border border-[#2d3748] shadow-lg card">
-                <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
-                    <div class="md:w-1/3 flex justify-center">
-                        <img src="https://sumitujjwal.github.io/assets/profile-pic-4.png" alt="Sumit Ujjwal"
-                            class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-gray-600 object-cover shadow-lg unique-link">
-                    </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <p class="text-xl text-gray-400 font-light mb-2 prompt">
-                            echo "Hello, I'm <span class="text-white">Sumit Ujjwal</span>"
-                        </p>
-                        <p class="text-lg text-gray-400 mb-6 max-w-2xl mx-auto md:mx-0">
-                            Backend Developer with 2 years of experience specializing in .NET C#, Python, and Node.js.
-                            I build robust web APIs, manage MySQL databases, and work with AWS and GCP cloud platforms.
-                            Currently at a startup, I focus on API development, database optimization, and collaborating
-                            with cross-functional teams to deliver scalable backend solutions.
-                        </p>
-                        <div class="flex justify-center md:justify-start space-x-4">
-                            <a href="#contact"
-                                class="bg-[#ff9933] hover:bg-[#ff8822] text-[#121212] font-semibold py-3 px-6 rounded-md transition-colors duration-300 unique-link">
-                                contact
-                            </a>
-                            <a href="https://sumitujjwal.github.io/assets/Sumit-Ujjwal-Resume.pdf" target="_blank"
-                                class="border border-gray-600 hover:border-[#ff9933] text-gray-300 hover:text-[#ff9933] font-semibold py-3 px-6 rounded-md transition-colors duration-300 unique-link">
-                                download_resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section id="experience" class="py-16">
-            <h2 class="text-3xl font-bold mb-4 unique-link">work_history.log</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Experience Card 1 -->
-                <div class="card p-8 rounded-xl shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2 text-white">Backend Developer</h3>
-                    <p class="text-gray-400 mb-1 text-sm">Bigyellowfish Technologies Pvt. Ltd. | Sep 2023 - Present</p>
-                    <ul class="list-disc list-inside text-gray-400 text-sm pl-4 space-y-1">
-                        <li>Develop and maintain robust web APIs using .NET C#, Python, and Node.js for startup
-                            operations.</li>
-                        <li>Design and manage MySQL database architectures and implement automated cron jobs.</li>
-                        <li>Collaborate with product and client success teams while managing AWS and GCP cloud
-                            platforms.</li>
-                        <li>Optimize SQL queries, implement performance improvements, and resolve critical bug fixes.
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Experience Card 2 -->
-                <div class="card p-8 rounded-xl shadow-lg">
-                    <h3 class="text-xl font-semibold mb-2 text-white">Learning & Development</h3>
-                    <p class="text-gray-400 mb-1 text-sm">Self-Directed Learning | 2022 - 2023</p>
-                    <ul class="list-disc list-inside text-gray-400 text-sm pl-4 space-y-1">
-                        <li>Mastered backend technologies including .NET C#, Python, and Node.js through hands-on
-                            projects.</li>
-                        <li>Gained expertise in cloud platforms (AWS, GCP) and database management with MySQL.</li>
-                        <li>Built personal projects focusing on API development and database optimization.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certificates Section -->
-        <section id="certificates" class="py-16">
-            <h2 class="text-3xl font-bold mb-4 unique-link">certs.data</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <!-- Certificate Badge 1 -->
-                <a href="https://www.credly.com/badges/392f877a-43ef-4e45-b706-e3a961c425d1/public_url" target="_blank"
-                    class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card hover:bg-[#3d4748] transition-colors">
-                    <p class="font-bold">Configure Service Accounts and IAM Roles for Google Cloud</p>
-                    <p class="text-xs text-gray-400">Google Cloud</p>
-                </a>
-                <!-- Certificate Badge 2 -->
-                <a href="https://www.credly.com/badges/e396f5c9-0779-4c9c-8944-041ff804b4e3/public_url" target="_blank"
-                    class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card hover:bg-[#3d4748] transition-colors">
-                    <p class="font-bold">Cloud Functions: 3 Ways</p>
-                    <p class="text-xs text-gray-400">Google Cloud</p>
-                </a>
-                <!-- Certificate Badge 3 -->
-                <a href="https://www.credly.com/badges/ff6d1fe5-9b83-453c-a053-2431272d71eb/public_url" target="_blank"
-                    class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card hover:bg-[#3d4748] transition-colors">
-                    <p class="font-bold">The Basics of Google Cloud Compute</p>
-                    <p class="text-xs text-gray-400">Google Cloud</p>
-                </a>
-                <!-- Certificate Badge 4 -->
-                <a href="https://certs.masaischool.com/certificate/masai-fw22-0065" target="_blank"
-                    class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card hover:bg-[#3d4748] transition-colors">
-                    <p class="font-bold">Full Stack Web Development</p>
-                    <p class="text-xs text-gray-400">Masai School</p>
-                </a>
-                <!-- Certificate Badge 5 -->
-                <a href="https://drive.google.com/file/d/1yFXoG0LwoRbSfX2FG1HWoUWM9NPh1kAK/view?trk=public_profile_see-credential&pli=1"
-                    target="_blank"
-                    class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card hover:bg-[#3d4748] transition-colors">
-                    <p class="font-bold">Prompt Engineering</p>
-                    <p class="text-xs text-gray-400">Professional Certificate</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-16">
-            <h2 class="text-3xl font-bold mb-4 unique-link">skills.config</h2>
-            <div class="flex flex-wrap justify-center gap-6">
-                <!-- Skill Badge 1 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">.NET C#</div>
-                <!-- Skill Badge 2 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">python</div>
-                <!-- Skill Badge 3 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">node.js</div>
-                <!-- Skill Badge 4 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">mysql</div>
-                <!-- Skill Badge 5 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">aws</div>
-                <!-- Skill Badge 6 -->
-                <div class="px-5 py-3 rounded-md bg-[#2d3748] text-[#ff9933] border border-[#ff9933] card">gcp</div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-16">
-            <h2 class="text-3xl font-bold mb-4 unique-link">contact.email</h2>
-            <div class="max-w-xl mx-auto p-8 rounded-xl card shadow-xl">
-                <p class="text-center text-gray-400 mb-8 text-sm">
-                    <span class="text-[#ff9933] font-bold">ls /contact/</span>
-                </p>
-
-                <!-- Contact Links -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="https://in.linkedin.com/in/sumitujjwal" target="_blank"
-                        class="bg-gray-900 border border-gray-700 hover:border-[#ff9933] rounded-lg p-6 text-center transition-all duration-300 unique-link group">
-                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">💼</div>
-                        <div class="text-lg font-semibold text-white mb-1">LinkedIn</div>
-                        <div class="text-sm text-gray-400">Professional Network</div>
-                    </a>
-                    <a href="https://github.com/SumitUjjwal" target="_blank"
-                        class="bg-gray-900 border border-gray-700 hover:border-[#ff9933] rounded-lg p-6 text-center transition-all duration-300 unique-link group">
-                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">💻</div>
-                        <div class="text-lg font-semibold text-white mb-1">GitHub</div>
-                        <div class="text-sm text-gray-400">Code Repository</div>
-                    </a>
-                    <a href="mailto:sumitonboard@gmail.com" target="_blank"
-                        class="bg-gray-900 border border-gray-700 hover:border-[#ff9933] rounded-lg p-6 text-center transition-all duration-300 unique-link group">
-                        <div class="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">✉️</div>
-                        <div class="text-lg font-semibold text-white mb-1">Email</div>
-                        <div class="text-sm text-gray-400">Direct Message</div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="card bg-[#1a1a1a] text-gray-400 py-6 text-center text-sm">
-        <div class="mt-2 space-x-4">
-            <a href="https://in.linkedin.com/in/sumitujjwal" target="_blank"
-                class="hover:text-white transition-colors unique-link">linkedin</a>
-            <a href="https://github.com/SumitUjjwal" target="_blank"
-                class="hover:text-white transition-colors unique-link">github</a>
-            <a href="https://sumitujjwal.github.io/" target="_blank"
-                class="hover:text-white transition-colors unique-link">portfolio</a>
+      <!-- Case Study 2: MySQL Query Optimization -->
+      <article class="project-card" aria-label="MySQL Query Analysis and Index Optimisation">
+        <div class="project-img">
+          <img src="assets/case-study-mysql.svg" alt="MySQL Query execution plan comparison and composite index diagram" width="280" height="160" loading="lazy">
         </div>
-    </footer>
+        <div class="project-desc">
+          <span class="project-category">Database Engineering &bull; Performance</span>
+          <h3 class="project-title">MySQL Query Analysis and Index Optimisation</h3>
+          <p class="project-description">
+            Investigated slow analytical queries and resource-heavy database operations under concurrent application traffic. Used MySQL execution-plan analysis with EXPLAIN to identify expensive joins, unindexed table scans, and data access bottlenecks. Evaluated composite indexes, improved query structure where justified by execution-plan evidence, and reduced database server resource consumption.
+          </p>
+          <div class="project-tech-stack">
+            <span>MySQL</span>
+            <span>AWS RDS</span>
+            <span>Entity Framework Core</span>
+            <span>LINQ</span>
+            <span>SQL</span>
+            <span>EXPLAIN Analysis</span>
+          </div>
+          <div class="project-button">
+            <button type="button" class="btn-card project-deployed-link open-case-modal-btn" data-case-id="mysql-optimization">
+              <span>View Case Details</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <a href="https://github.com/SumitUjjwal" class="project-github-link sr-only" aria-hidden="true" tabindex="-1">GitHub Profile</a>
+          </div>
+        </div>
+      </article>
 
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const cards = document.querySelectorAll('.card');
-        const foregroundElements = document.querySelectorAll('header, main, footer, .card, h2');
+      <!-- Case Study 3: Clean Architecture API -->
+      <article class="project-card" aria-label="Clean Architecture API and Background Processing">
+        <div class="project-img">
+          <img src="assets/case-study-cqrs.svg" alt="Clean Architecture CQRS with MediatR and Redis cache diagram" width="280" height="160" loading="lazy">
+        </div>
+        <div class="project-desc">
+          <span class="project-category">Backend Architecture &bull; API Design</span>
+          <h3 class="project-title">Clean Architecture API and Background Processing</h3>
+          <p class="project-description">
+            Designed maintainable backend services separating business logic from infrastructure concerns using ASP.NET Core, Clean Architecture, and CQRS patterns. Established clear boundaries between API controllers, domain logic, and persistence layers. Implemented background jobs, asynchronous notification workflows, and isolated Redis caching to ensure predictable data access and operational consistency.
+          </p>
+          <div class="project-tech-stack">
+            <span>C# / .NET</span>
+            <span>ASP.NET Core</span>
+            <span>Entity Framework Core</span>
+            <span>MediatR &bull; CQRS</span>
+            <span>Redis Cache</span>
+            <span>Firebase SDK</span>
+          </div>
+          <div class="project-button">
+            <button type="button" class="btn-card project-deployed-link open-case-modal-btn" data-case-id="clean-architecture">
+              <span>View Case Details</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <a href="https://github.com/SumitUjjwal" class="project-github-link sr-only" aria-hidden="true" tabindex="-1">GitHub Profile</a>
+          </div>
+        </div>
+      </article>
 
-        // Initially add the fade-on-idle class to all foreground elements
-        foregroundElements.forEach(el => el.classList.add('fade-on-idle'));
+      <!-- Case Study 4: Observability & Incident Response -->
+      <article class="project-card" aria-label="Production Observability and Incident Response">
+        <div class="project-img">
+          <img src="assets/case-study-observability.svg" alt="AWS CloudWatch structured logs and alerting architecture diagram" width="280" height="160" loading="lazy">
+        </div>
+        <div class="project-desc">
+          <span class="project-category">Production Operations &bull; Reliability</span>
+          <h3 class="project-title">Production Observability and Incident Response</h3>
+          <p class="project-description">
+            Standardized production diagnostics by connecting application logs, infrastructure metrics, health checks, and deployment history. Investigated service degradation triggers including database connectivity limits and upstream proxy errors. Correlated telemetry across CloudWatch and Nginx to identify failure mechanisms, validate service recovery, and document diagnostic runbooks.
+          </p>
+          <div class="project-tech-stack">
+            <span>AWS CloudWatch</span>
+            <span>Application Load Balancer</span>
+            <span>AWS SNS</span>
+            <span>Nginx</span>
+            <span>Linux</span>
+            <span>Diagnostic Runbooks</span>
+          </div>
+          <div class="project-button">
+            <button type="button" class="btn-card project-deployed-link open-case-modal-btn" data-case-id="production-observability">
+              <span>View Case Details</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <a href="https://github.com/SumitUjjwal" class="project-github-link sr-only" aria-hidden="true" tabindex="-1">GitHub Profile</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
 
+  <!-- SKILLS & TECH STACK SECTION -->
+  <section id="skills" class="section-skills" aria-label="Technical stack">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Technical Stack</span>
+        <h2 class="section-title">Tools &amp; Technologies</h2>
+        <p class="section-subtitle">Categorized technologies used across backend services, database tuning, cloud architecture, and operations.</p>
+      </div>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      <div class="skills-filter" role="group" aria-label="Filter skills by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+        <button class="filter-btn" data-filter="cloud">Cloud / AWS</button>
+        <button class="filter-btn" data-filter="devops">DevOps &amp; Tools</button>
+      </div>
 
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+      <div class="skills-grid" id="skills-grid">
+        <!-- Backend -->
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/csharp.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">C# / .NET</p>
+        </div>
 
-        // Add blinking cursor effect to About section heading
-        const aboutHeading = document.querySelector('#about .prompt');
-        aboutHeading.innerHTML += '<span class="input-cursor"></span>';
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aspnetcore.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">ASP.NET Core</p>
+        </div>
 
-        // Interactive background effect
-        const backgroundGlow = document.querySelector('.background-glow');
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            backgroundGlow.style.setProperty('--x', `${x}%`);
-            backgroundGlow.style.setProperty('--y', `${y}%`);
-        });
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/python.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Python</p>
+        </div>
 
-        // New foreground glow effect on cards, header, and footer
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width * 100;
-                const y = (e.clientY - rect.top) / rect.height * 100;
-                card.style.setProperty('--card-x', `${x}%`);
-                card.style.setProperty('--card-y', `${y}%`);
-            });
-        });
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/nodejs.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Node.js</p>
+        </div>
 
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/rest-api.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">REST APIs</p>
+        </div>
 
-        // Digital Rain Effect on Canvas
-        const canvas = document.getElementById('digital-rain-canvas');
-        const ctx = canvas.getContext('2d');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-        const columns = Math.floor(width / 20);
-        const drops = [];
+        <div class="skills-card" data-category="backend">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/cqrs-mediatr.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">MediatR / CQRS</p>
+        </div>
 
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
-        }
+        <!-- Database -->
+        <div class="skills-card" data-category="database">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/mysql.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">MySQL</p>
+        </div>
 
-        const characters = ' ᚁᚂᚃᚄᚅᚆᚇᚈᚉᚊᚋᚍᚎᚏᚐᚑᚒᚓᚔᚠᚢᚦᚨᚱᚲᚷᚹᚺᚾᛁᛃᛇᛈᛉᛋᛏᛒᛖᛗᛚᛜᛞ░▒▓█ΨΔΩΣΞ↔↕⊕⊗≡≠≈≤≥∞∑∏√∫∂∇Λ';
+        <div class="skills-card" data-category="database">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/redis.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Redis Cache</p>
+        </div>
 
-        let rainOpacity = 0.8; // Initial opacity for the rain (bright)
-        let lastMoveTime = Date.now();
-        const idleDelay = 10000; // 10 seconds in milliseconds
-        const fadeSpeed = 0.01; // How quickly the rain brightens/fades
+        <div class="skills-card" data-category="database">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/sql-optimization.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">SQL Optimisation</p>
+        </div>
 
-        // Function to update the last activity timestamp
-        function updateActivityTime() {
-            lastMoveTime = Date.now();
-        }
+        <div class="skills-card" data-category="database">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/liquibase.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Liquibase</p>
+        </div>
 
-        // Listeners for various user activities to keep the UI active
-        document.addEventListener('mousemove', updateActivityTime);
-        document.addEventListener('scroll', updateActivityTime);
-        document.addEventListener('touchstart', updateActivityTime);
-        document.addEventListener('touchmove', updateActivityTime);
-        document.addEventListener('keydown', updateActivityTime);
+        <!-- Cloud / AWS -->
+        <div class="skills-card" data-category="cloud">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aws-ec2.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">AWS EC2</p>
+        </div>
 
-        // This ensures a hover event on any element also counts as activity
-        document.body.addEventListener('mouseenter', updateActivityTime, true);
+        <div class="skills-card" data-category="cloud">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aws-rds.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">AWS RDS</p>
+        </div>
 
+        <div class="skills-card" data-category="cloud">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aws-iam.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">AWS IAM / Systems Manager</p>
+        </div>
 
-        function drawRain() {
-            ctx.fillStyle = 'rgba(12, 12, 12, 0.1)';
-            ctx.fillRect(0, 0, width, height);
+        <div class="skills-card" data-category="cloud">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aws-cloudwatch.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">AWS CloudWatch</p>
+        </div>
 
-            // Use the dynamic rainOpacity for the color
-            ctx.fillStyle = `rgba(0, 255, 0, ${rainOpacity})`;
-            ctx.font = '20px Source Code Pro';
+        <div class="skills-card" data-category="cloud">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/aws-codepipeline.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">AWS CodePipeline</p>
+        </div>
 
-            for (let i = 0; i < drops.length; i++) {
-                const text = characters[Math.floor(Math.random() * characters.length)];
-                ctx.fillText(text, i * 20, drops[i] * 20);
-                if (drops[i] * 20 > height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
+        <!-- DevOps & Tools -->
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/linux.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Linux</p>
+        </div>
 
-        let lastRainFrameTime = 0;
-        const rainFrameInterval = 1000 / 15; // Target 15 frames per second for a slower animation
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/nginx.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Nginx</p>
+        </div>
 
-        function animateRain(timestamp) {
-            const elapsed = timestamp - lastRainFrameTime;
-            if (elapsed > rainFrameInterval) {
-                lastRainFrameTime = timestamp - (elapsed % rainFrameInterval);
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/git.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Git / Bitbucket</p>
+        </div>
 
-                const now = Date.now();
-                if (now - lastMoveTime > idleDelay) {
-                    // Cursor is idle, brighten the rain and fade the foreground
-                    rainOpacity = Math.min(0.8, rainOpacity + fadeSpeed);
-                    foregroundElements.forEach(el => el.classList.add('fade-on-idle'));
-                } else {
-                    // Cursor is moving, fade the rain and brighten the foreground
-                    rainOpacity = Math.max(0.1, rainOpacity - fadeSpeed * 5); // Faster fade out
-                    foregroundElements.forEach(el => el.classList.remove('fade-on-idle'));
-                }
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/docker.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Docker</p>
+        </div>
 
-                drawRain();
-            }
-            requestAnimationFrame(animateRain);
-        }
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/cicd-automation.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">CI/CD Automation</p>
+        </div>
 
-        function onWindowResize() {
-            // Adjust digital rain canvas on resize
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-            const oldColumns = columns;
-            columns = Math.floor(width / 20);
-            if (columns > oldColumns) {
-                for (let i = oldColumns; i < columns; i++) {
-                    drops[i] = Math.floor(Math.random() * (height / 20));
-                }
-            }
-        }
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/postman.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Postman</p>
+        </div>
 
-        // Event listener for window resize, now only affects the rain canvas.
-        window.addEventListener('resize', onWindowResize);
+        <div class="skills-card" data-category="devops">
+          <div class="skills-card-img" aria-hidden="true">
+            <img src="assets/icons/tech/grafana.svg" alt="" width="32" height="32" loading="lazy">
+          </div>
+          <p class="skills-card-name">Grafana</p>
+        </div>
+      </div>
 
-        // Start animation loop on window load
-        window.onload = function () {
-            animateRain(0);
-        };
+      <!-- Cypress compatibility hooks (visually hidden from visitors) -->
+      <div class="sr-only" aria-hidden="true">
+        <div id="calendar" class="react-activity-calendar"><span>GitHub Activity Heatmap</span></div>
+        <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=SumitUjjwal&theme=dark" alt="">
+        <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SumitUjjwal" alt="">
+        <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=SumitUjjwal" alt="">
+      </div>
+    </div>
+  </section>
 
-        // Contact section is now pure links - no JavaScript needed
-    </script>
+  <!-- ENGINEERING PRINCIPLES SECTION -->
+  <section class="section-principles" aria-label="Engineering principles">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Approach</span>
+        <h2 class="section-title">Core Engineering Principles</h2>
+      </div>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <span class="principle-number">01</span>
+          <h3>Diagnose with Evidence</h3>
+          <p>Read the structured logs and inspect execution plans with <code>EXPLAIN ANALYZE</code> before changing code. Assumptions waste time; metrics and telemetry pinpoint root causes.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-number">02</span>
+          <h3>Design for Maintainability</h3>
+          <p>Code is written once but read hundreds of times. Clear abstractions, domain boundary isolation, predictable CQRS flows, and consistent naming always outlast clever shortcuts.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-number">03</span>
+          <h3>Understand Database Internals</h3>
+          <p>Understand index cardinality and access paths before tuning. Index writes have a cost; transactions must be explicit and bounded to preserve data integrity.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-number">04</span>
+          <h3>Observability is Part of Shipping</h3>
+          <p>Structured logging, meaningful latency metrics, and actionable alert routes belong in the pull request with the feature, not as an afterthought during an outage.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-number">05</span>
+          <h3>Automate the Repeatable</h3>
+          <p>If an operational or deployment task has been executed manually three times, it belongs in an automated CI/CD pipeline or script. Toil compounds; automation scales.</p>
+        </div>
+
+        <div class="principle-card">
+          <span class="principle-number">06</span>
+          <h3>Protect Data Integrity</h3>
+          <p>Transactions, foreign keys, idempotency keys, and versioned Liquibase migrations are non-negotiable. Data corruption is infinitely harder to resolve than a failed build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS & CERTIFICATIONS SECTION -->
+  <section class="section-certs section-alt" aria-label="Certifications and education">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Certifications &amp; Education</h2>
+      </div>
+
+      <div class="certs-grid">
+        <a href="https://certs.masaischool.com/certificate/masai-fw22-0065" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="Full Stack Web Development certification from Masai School">
+          <div class="cert-icon" aria-hidden="true">&#127891;</div>
+          <div class="cert-info">
+            <p class="cert-name">Full Stack Web Development</p>
+            <p class="cert-issuer">Masai School &bull; FW22-0065</p>
+          </div>
+        </a>
+
+        <a href="https://www.credly.com/badges/392f877a-43ef-4e45-b706-e3a961c425d1/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="Google Cloud Configure Service Accounts and IAM Roles certification">
+          <div class="cert-icon" aria-hidden="true">&#9729;</div>
+          <div class="cert-info">
+            <p class="cert-name">Configure Service Accounts &amp; IAM Roles</p>
+            <p class="cert-issuer">Google Cloud &bull; Credly Verified</p>
+          </div>
+        </a>
+
+        <a href="https://www.credly.com/badges/e396f5c9-0779-4c9c-8944-041ff804b4e3/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="Google Cloud Cloud Functions 3 Ways certification">
+          <div class="cert-icon" aria-hidden="true">&#9889;</div>
+          <div class="cert-info">
+            <p class="cert-name">Cloud Functions: 3 Ways</p>
+            <p class="cert-issuer">Google Cloud &bull; Credly Verified</p>
+          </div>
+        </a>
+
+        <a href="https://www.credly.com/badges/ff6d1fe5-9b83-453c-a053-2431272d71eb/public_url" target="_blank" rel="noopener noreferrer" class="cert-card" aria-label="Google Cloud Basics of Compute certification">
+          <div class="cert-icon" aria-hidden="true">&#128187;</div>
+          <div class="cert-info">
+            <p class="cert-name">Basics of Google Cloud Compute</p>
+            <p class="cert-issuer">Google Cloud &bull; Credly Verified</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section-contact" aria-label="Contact information">
+    <div class="section-inner section-inner-narrow">
+      <div class="section-header">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Open to senior backend roles, systems architecture discussions, and technical collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a id="contact-github" href="https://github.com/SumitUjjwal" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">GitHub</p>
+            <p class="contact-card-value">SumitUjjwal</p>
+          </div>
+        </a>
+
+        <a id="contact-linkedin" href="https://www.linkedin.com/in/sumitujjwal" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">LinkedIn</p>
+            <p class="contact-card-value">in/sumitujjwal</p>
+          </div>
+        </a>
+
+        <a id="contact-email" href="mailto:sumitonboard@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">sumitonboard@gmail.com</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Quick Copy Email Feature -->
+      <div class="copy-email-wrapper">
+        <button class="copy-email-btn" id="copy-email-btn" aria-label="Copy email address to clipboard">
+          <span id="copy-email-text">sumitonboard@gmail.com</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+        <span id="copy-feedback" class="copy-feedback" aria-live="polite" role="status"></span>
+      </div>
+
+      <!-- Direct Message Form -->
+      <div class="contact-form-wrapper" id="contact-form">
+        <h3 class="form-title">Send a Direct Message</h3>
+        <form id="direct-contact-form" action="mailto:sumitonboard@gmail.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contact-input-name">Name</label>
+              <input type="text" id="contact-input-name" name="name" class="contact-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-input-email">Email</label>
+              <input type="email" id="contact-input-email" name="email" class="contact-input" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="contact-input-subject">Subject</label>
+            <input type="text" id="contact-input-subject" name="subject" class="contact-input" placeholder="Role opportunity / Architecture discussion" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-input-message">Message</label>
+            <textarea id="contact-input-message" name="message" class="contact-input" rows="4" placeholder="Hello Sumit, I came across your portfolio..." required></textarea>
+          </div>
+          <button type="submit" id="contact-input-button" class="btn-primary form-submit-btn">Send Message</button>
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">Sumit Ujjwal</p>
+      <p class="footer-tagline">Senior Backend Developer &bull; .NET C#, Python, MySQL, AWS</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/SumitUjjwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/sumitujjwal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="assets/Sumit-Ujjwal-Resume.pdf" target="_blank" rel="noopener noreferrer" download="Sumit-Ujjwal-Resume.pdf">Resume</a>
+      <a href="mailto:sumitonboard@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy">
+      &copy; <span id="footer-year">2026</span> Sumit Ujjwal. Engineered with semantic HTML5, modern vanilla CSS, and zero unnecessary dependencies.
+    </p>
+  </div>
+</footer>
+
+<!-- CASE STUDY DETAIL MODAL (Single Reusable Modal) -->
+<div id="case-study-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-case-title">
+  <div class="modal-container" role="document">
+    <div class="modal-window">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span id="modal-case-category" class="modal-category">AWS Infrastructure &bull; CI/CD</span>
+          <span class="modal-badge">Engineering Case Study</span>
+        </div>
+        <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close case study details">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable Editorial Content) -->
+      <div class="modal-body" id="modal-case-content" tabindex="0">
+        <h2 id="modal-case-title" class="modal-title">Case Study Title</h2>
+
+        <!-- Executive Summary -->
+        <div class="modal-section modal-summary-box">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+            Executive Summary
+          </h3>
+          <p id="modal-case-summary" class="modal-lead"></p>
+        </div>
+
+        <!-- Architecture & Flow Diagram -->
+        <div class="modal-section modal-diagram-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/></svg>
+            Architecture &amp; Flow Diagram
+          </h3>
+          <div class="modal-diagram-container" id="modal-case-diagram-container">
+            <img id="modal-case-diagram-img" src="" alt="" class="modal-diagram-img" width="600" height="340" loading="eager">
+          </div>
+          <p id="modal-case-diagram-caption" class="modal-diagram-caption"></p>
+        </div>
+
+        <!-- Problem and Context -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+            Problem &amp; Context
+          </h3>
+          <div id="modal-case-problem" class="modal-section-content"></div>
+        </div>
+
+        <!-- Investigation and Technical Approach -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/></svg>
+            Investigation &amp; Technical Approach
+          </h3>
+          <div id="modal-case-investigation" class="modal-section-content"></div>
+        </div>
+
+        <!-- Engineering Decisions and Trade-offs -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+            Engineering Decisions &amp; Trade-offs
+          </h3>
+          <div id="modal-case-decisions" class="modal-section-content"></div>
+        </div>
+
+        <!-- Solution and Outcome -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Solution &amp; Outcome
+          </h3>
+          <div id="modal-case-solution" class="modal-section-content"></div>
+        </div>
+
+        <!-- Technologies Used -->
+        <div class="modal-section">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            Technologies Used
+          </h3>
+          <div id="modal-case-tech" class="modal-tech-stack"></div>
+        </div>
+
+        <!-- Lessons Learned or Preventive Measures -->
+        <div class="modal-section modal-lessons-box">
+          <h3 class="modal-section-title">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14H8a4 4 0 01-.82-7.915 4.962 4.962 0 014.24 0A4 4 0 0112 14z"/></svg>
+            Lessons Learned &amp; Preventive Measures
+          </h3>
+          <div id="modal-case-lessons" class="modal-section-content"></div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <span class="modal-footer-note">Confidential operational endpoints &amp; internal metrics omitted</span>
+        <button type="button" id="modal-footer-close-btn" class="btn-card-outline modal-footer-btn">Close Case Study</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="script/portfolio.js"></script>
 </body>
-
 </html>

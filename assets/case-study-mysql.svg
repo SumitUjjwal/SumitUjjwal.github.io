@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-mysql" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131a"/>
+      <stop offset="100%" stop-color="#161e2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg-mysql)" rx="8"/>
+  <rect x="1" y="1" width="598" height="338" fill="none" stroke="#388bfd" stroke-opacity="0.15" rx="7"/>
+  <!-- Title Badge -->
+  <rect x="30" y="24" width="160" height="22" rx="4" fill="#388bfd" fill-opacity="0.12" stroke="#388bfd" stroke-opacity="0.3"/>
+  <text x="110" y="39" fill="#58a6ff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" text-anchor="middle">QUERY OPTIMISATION</text>
+  <!-- Execution Comparison Grid -->
+  <!-- Left Box: Before (Slow Scan) -->
+  <rect x="30" y="65" width="255" height="130" rx="6" fill="#1a1d24" stroke="#f85149" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="42" y="77" width="150" height="20" rx="3" fill="#f85149" fill-opacity="0.15"/>
+  <text x="117" y="91" fill="#ff7b72" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">BEFORE: TABLE SCAN</text>
+  <text x="45" y="122" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">type: <tspan fill="#ff7b72">ALL (Full Table Scan)</tspan></text>
+  <text x="45" y="142" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">rows: <tspan fill="#ff7b72">1,420,000 scanned</tspan></text>
+  <text x="45" y="162" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">latency: <tspan fill="#ff7b72">Elevated (Timeout risk)</tspan></text>
+  <text x="45" y="182" fill="#ff7b72" font-family="'JetBrains Mono', monospace" font-size="9">Using Temporary; Using Filesort</text>
+  <!-- Right Box: After (Targeted Index) -->
+  <rect x="315" y="65" width="255" height="130" rx="6" fill="#16211e" stroke="#3fb950" stroke-opacity="0.5" stroke-width="1.5"/>
+  <rect x="327" y="77" width="170" height="20" rx="3" fill="#3fb950" fill-opacity="0.15"/>
+  <text x="412" y="91" fill="#7ee787" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" text-anchor="middle">AFTER: COMPOSITE INDEX</text>
+  <text x="330" y="122" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">type: <tspan fill="#7ee787">ref (B-Tree Index Lookup)</tspan></text>
+  <text x="330" y="142" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">rows: <tspan fill="#7ee787">14 rows examined</tspan></text>
+  <text x="330" y="162" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10">latency: <tspan fill="#7ee787">Optimized (Index Lookup)</tspan></text>
+  <text x="330" y="182" fill="#7ee787" font-family="'JetBrains Mono', monospace" font-size="9">Using Index Condition; Using Where</text>
+  <!-- Stored Proc & Connection Pool Architecture -->
+  <rect x="30" y="215" width="540" height="95" rx="6" fill="#111620" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="240" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">OPTIMIZATION ARCHITECTURE</text>
+  <g transform="translate(45, 255)">
+    <rect x="0" y="0" width="155" height="40" rx="4" fill="#182333" stroke="#58a6ff" stroke-width="1"/>
+    <text x="77.5" y="19" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Composite Indexing</text>
+    <text x="77.5" y="32" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">(companyId, createdAt)</text>
+  </g>
+  <g transform="translate(222, 255)">
+    <rect x="0" y="0" width="155" height="40" rx="4" fill="#182333" stroke="#ff9933" stroke-width="1"/>
+    <text x="77.5" y="19" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Stored Procedures</text>
+    <text x="77.5" y="32" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">Complex Analytics Aggs</text>
+  </g>
+  <g transform="translate(400, 255)">
+    <rect x="0" y="0" width="155" height="40" rx="4" fill="#182333" stroke="#3fb950" stroke-width="1"/>
+    <text x="77.5" y="19" fill="#e6edf3" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Pool Tuning</text>
+    <text x="77.5" y="32" fill="#8b949e" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">Max Connection Controls</text>
+  </g>
+</svg>
