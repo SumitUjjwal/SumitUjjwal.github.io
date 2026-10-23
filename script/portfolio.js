@@ -103,7 +103,7 @@ function closeMobileNav() {
   if (!btn || !feedback) return;
 
   btn.addEventListener('click', function() {
-    var email = 'sumitonboard@gmail.com';
+    var email = 'sumitujjwal@outlook.com';
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(email).then(function() {
         feedback.textContent = 'Copied to clipboard!';
@@ -169,7 +169,7 @@ function closeMobileNav() {
   function fallbackMailto(name, email, subject, message) {
     status.style.color = 'var(--accent)';
     status.textContent = 'Opening your email client to send message...';
-    var mailtoUrl = 'mailto:sumitonboard@gmail.com' +
+    var mailtoUrl = 'mailto:sumitujjwal@outlook.com' +
       '?subject=' + encodeURIComponent((subject || 'Portfolio Inquiry') + ' - ' + name) +
       '&body=' + encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + message);
     window.location.href = mailtoUrl;

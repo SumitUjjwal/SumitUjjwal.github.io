@@ -1957,7 +1957,7 @@ header#nav-menu.scrolled {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .footer-links a {

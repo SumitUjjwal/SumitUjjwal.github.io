@@ -23,7 +23,7 @@ app.post("/messages", async(req, res) => {
     });
 
     transporter.sendMail({
-        to: "sumitujjwal.work@gmail.com",
+        to: "sumitujjwal@outlook.com",
         // from: "sumit@scratch.com",
         subject: `${subject} - ${name}`,
         text: `from: ${email} \n message: ${message}`
